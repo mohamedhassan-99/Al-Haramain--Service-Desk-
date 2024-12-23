@@ -1,0 +1,2081 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Al-Haramen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="/scripts/IncludeSDPScripts.js?build=14620" type="text/javascript"></script>
+    <script src="/scripts/sdp_global.js?hash=9f2a528592b9d3620ee950a42ed2d29b" type="text/javascript"></script>
+    <script src="/scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+
+
+        @font-face {
+            font-family: 'Din';
+            src: url('/din-next-lt-arabic/Din-Next-LT-Arabic-Regular.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Din';
+            src: url('/din-next-lt-arabic/Din-Next-LT-Arabic-Medium.ttf') format('truetype');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Din';
+            src: url('/custom/font/302/Din-Next-LT-Arabic-Regular.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Din';
+            src: url('/custom/font/301/Din-Next-LT-Arabic-Medium.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: rgba(var(--light-brown), 0.2) !important;
+            border-radius: 5px !important;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgba(var(--light-brown), 1) !important;
+            border-radius: 5px !important;
+        }
+
+        .qaaba,
+        .divider,
+        .actions-wrapper,
+        .announcements-and-assets-wrapper,
+        .data-wrapper {
+            font-family: 'Din', 'Amiri' !important;
+        }
+
+        body {
+            --light-brown: 187, 150, 97;
+            --dark-blue: 34, 50, 61;
+            --light-brown-color: #bb9661;
+            --dark-blue-color: #22323d;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 40px;
+            gap: 30px;
+
+
+        }
+
+        body[theme="dark-mode"] {
+            background-color: rgb(var(--dark-blue)) !important;
+        }
+
+        h4 {
+            color: rgb(var(--light-brown));
+            font-size: x-large;
+            font-weight: 600;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+                /* background-position: 0 0; */
+            }
+
+            100% {
+                transform: rotate(360deg);
+                /* background-position: 0px 1000px; */
+            }
+        }
+
+        .qaaba {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-basis: 1;
+            min-height: 280px;
+            min-width: 100%;
+            position: relative;
+            mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 2%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 98%);
+
+            filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
+            overflow: hidden;
+            border-radius: 15px;
+
+            &>.qaaba-img-wrapper {
+                object-fit: contain;
+                overflow: hidden;
+                filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+
+                &>.bg {
+                    position: absolute;
+                    width: 200%;
+                    height: 400%;
+                    background-image: url(/custom/widgets/SSP/images/Al-Haramain_Brand_Element_Transparent_Background_Pattern.png);
+                    animation: rotate 120s ease-in-out 0s infinite alternate;
+                }
+
+                &>.qaaba-img {
+                    justify-self: center;
+                    width: 95%;
+                    height: 350px;
+                    z-index: 1;
+                    background-color: black;
+
+                    @media (width <=960px) {
+                        img {
+                            translate: 0px 0px !important;
+                            object-fit: cover;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        translate: 0 -100px;
+                        opacity: 50%;
+                    }
+                }
+            }
+
+            &>.qaaba-title {
+                top: 0;
+                padding: 10px;
+                background-color: transparent;
+                display: flex;
+                filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.75));
+                position: absolute;
+                flex-direction: column;
+                align-items: center;
+
+                &>h4 {
+                    font-size: 1.35rem;
+                    padding: 30px 0px;
+                    max-width: 75%;
+                    text-align: center;
+                }
+
+            }
+
+        }
+
+        .qaaba .logo {
+            height: 180px;
+            align-self: center;
+        }
+
+        .divider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(/custom/widgets/SSP/images/Al-Haramain_White_Brand_Element_Large_Bar_With_Borders.png);
+
+            [theme="dark-mode"] & {
+                background-image: url(/custom/widgets/SSP/images/Al-Haramain_Brand_Element_Large_Bar_With_Borders.png);
+            }
+
+            background-size: contain;
+            background-repeat: repeat-x;
+            min-height: 110px;
+            min-width: 100%;
+            mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 2%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 98%);
+
+            h2 {
+                color: rgb(var(--light-brown));
+                filter: drop-shadow(0px 0px 1px rgba(var(--dark-blue), 0.7));
+                text-shadow: 2px 2px 2px rgb(var(--dark-blue));
+
+                [theme="dark-mode"] & {
+                    filter: drop-shadow(0px 0px 5px var(--dark-blue));
+                    text-shadow: 0px 0px 3px rgb(var(--light-brown));
+                }
+            }
+
+            @media (width <=1280px) {
+                background-size: cover;
+            }
+        }
+
+        @keyframes scale-loop {
+            0% {
+                transform: scale(100%) translate(0, 0);
+            }
+
+            100% {
+                transform: scale(110%) translate(-5%, -5%);
+            }
+        }
+
+        .actions-wrapper {
+            min-height: 300px;
+            min-width: 100%;
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: space-evenly;
+            align-items: center;
+            animation: slide-in 2s cubic-bezier(0.42, 0, 0.84, 1.17) forwards;
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-300px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        #service-catalogs {
+            scrollbar-color: red !important;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 10px;
+            justify-content: center;
+            align-items: start;
+            min-height: 10vh;
+            max-width: 85vw;
+
+            .catalog-head {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                max-width: 200px;
+                min-width: 200px;
+                text-align: center;
+                text-wrap: nowrap;
+                border-radius: 10px;
+                border: 1px solid transparent;
+                transform: translateY(5%);
+
+                &,
+                img {
+                    transition: all 0.3s ease-in-out;
+                }
+
+                img {
+                    width: 40px;
+                    object-fit: contain;
+                    filter: grayscale();
+                }
+
+                &.is-selected,
+                &:hover {
+                    border: 1px solid rgb(var(--light-brown), 0.7);
+                    transform: translateY(0);
+
+                    img {
+                        filter: none;
+                    }
+                }
+
+                &.is-selected {
+                    background-color: rgb(var(--light-brown), 0.1);
+                    box-shadow: 1px 1px 5px rgb(var(--light-brown));
+                }
+            }
+        }
+
+        #service-type {
+            margin: 0;
+            border: 2px double rgb(var(--light-brown));
+            border-top: none;
+            border-left: none;
+            border-right: none;
+
+            display: flex;
+            width: 85vw;
+            justify-content: start;
+            align-items: center;
+            padding: 20px;
+            text-shadow: rgb(var(--light-brown));
+            font-size: xx-large;
+
+            &.incident {
+                color: gray;
+
+                [theme="dark-mode"] & {
+                    color: white;
+                    border: 2px double white;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    text-shadow: white;
+                }
+
+                border: 2px double gray;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                text-shadow: gray;
+            }
+        }
+
+        #selected-catalog {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 85vw;
+            padding: 20px;
+
+            a {
+                display: contents;
+                text-decoration: none;
+            }
+
+            .service,
+            .service.incident {
+                position: relative;
+                max-width: 400px;
+                min-width: 400px;
+                max-height: 160px;
+                min-height: 160px;
+                border-radius: 10px;
+                padding: 20px;
+                overflow: visible;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                transform: translateY(5%) scale(100%);
+                gap: 10px;
+
+                .service-start {
+                    position: absolute;
+                    bottom: 15px;
+                    left: 25px;
+                    font-size: x-large;
+                }
+
+                .service-head {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    img {
+                        max-width: 50px;
+                        min-width: 50px;
+                        min-height: 50px;
+                        object-fit: contain;
+                        border-radius: 5px;
+                    }
+
+                    h5 {
+                        text-wrap: pretty;
+                        font-size: large;
+                    }
+                }
+
+                &,
+                img,
+                .service-start,
+                .service-head>*,
+                .service-info>* {
+                    transition: all 0.3s ease-in-out;
+                }
+
+                .service-info {
+                    p {
+                        font-size: smaller;
+                        margin: 0;
+                        max-width: 90%;
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(0%) scale(102%);
+                }
+            }
+
+            .service {
+                background-color: rgb(var(--light-brown), 0.1);
+                border: 2px solid rgb(var(--light-brown));
+                box-shadow: 1px 1px 4px rgb(var(--light-brown));
+
+                &.incident {
+                    background-color: rgba(128, 128, 128, 0.1);
+                    border: 2px solid gray;
+                    box-shadow: 1px 1px 4px gray;
+                }
+
+
+                [theme="dark-mode"] & {
+                    border: 2px solid rgb(var(--dark-blue));
+                    box-shadow: 1px 1px 4px rgb(var(--dark-blue));
+
+                    &.incident {
+                        border: 2px solid gray;
+                        box-shadow: 1px 1px 4px gray;
+                    }
+                }
+
+                .service-start {
+                    color: rgb(var(--light-brown), 0.7);
+                }
+
+                &.incident .service-start {
+                    color: rgba(128, 128, 128, 0.7);
+
+                    [theme="dark-mode"] & {
+                        color: white;
+                    }
+                }
+
+                .service-head {
+
+                    img {
+                        background-color: rgba(var(--light-brown), 0.2);
+                    }
+
+                    h5 {
+                        color: rgb(var(--light-brown));
+                    }
+                }
+
+                &.incident .service-head {
+
+                    img {
+                        background-color: rgba(128, 128, 128, 0.2);
+                    }
+
+                    h5 {
+                        color: gray;
+                    }
+
+                    [theme="dark-mode"] & {
+                        h5 {
+                            color: white;
+                        }
+                    }
+                }
+
+                .service-info>p {
+                    color: rgb(var(--light-brown));
+                }
+
+                &.incident .service-info>p {
+                    color: gray;
+
+                    [theme="dark-mode"] & {
+                        color: white;
+                    }
+                }
+
+                &:hover {
+                    background-color: rgb(var(--light-brown));
+                    box-shadow: 3px 3px 5px rgb(var(--dark-blue));
+
+                    &.incident {
+                        background-color: gray;
+                        box-shadow: 3px 3px 5px gray;
+                    }
+
+                    [theme="dark-mode"] & {
+                        box-shadow: 3px 3px 5px rgba(var(--light-brown), 0.3);
+                    }
+
+                    [theme="dark-mode"] &.incident {
+                        box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.3);
+                    }
+
+                    img {
+                        background-color: rgb(var(--dark-blue), 0.2);
+                    }
+
+                    &.incident img {
+                        background-color: rgba(128, 128, 128, 0.2);
+                    }
+
+                    .service-start,
+                    .service-head>h5,
+                    .service-info>p {
+                        color: rgb(var(--dark-blue));
+                    }
+
+                    &.incident .service-start,
+                    &.incident .service-head>h5,
+                    &.incident .service-info>p {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .data-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 10px;
+            overflow: hidden;
+
+            &>#pieChartContainer,
+            #columnChartContainer {
+                height: 400px;
+                width: 85%;
+            }
+        }
+
+        .announcements-and-assets-wrapper {
+            width: 80%;
+            height: 370px;
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: end;
+            gap: 20px;
+        }
+
+        .announcements-wrapper {
+            min-height: 300px;
+            min-width: 70%;
+            box-shadow: 1px 1px 6px rgb(var(--light-brown));
+            border-radius: 10px;
+            border: 2px rgb(var(--light-brown)) solid;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .assets-wrapper {
+            width: 30%;
+            height: 300px;
+            display: flex;
+            text-align: start;
+            row-gap: 12px;
+            box-shadow: 1px 1px 6px rgb(var(--light-brown));
+            border-radius: 10px;
+            border: 2px rgb(var(--light-brown)) solid;
+            overflow: hidden;
+        }
+
+        .assets-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 7px;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            &:has(.asset-none) {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .asset-none {
+            padding: 5px;
+            background: rgb(var(--dark-blue));
+            color: rgb(var(--light-brown));
+            background: white;
+            text-align: center;
+
+            [theme="dark-mode"] & {
+                background: rgb(var(--dark-blue));
+            }
+        }
+
+        .asset {
+            min-height: 70px;
+            background-color: rgba(var(--light-brown), 10%);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: 3px;
+        }
+
+        .asset-icon {
+            width: 40px;
+            height: 40px;
+            padding: 9px;
+            margin: 0px 6px;
+            border-radius: 2px;
+            background-color: rgba(var(--light-brown), 0.5);
+            display: flex;
+            object-fit: cover;
+        }
+
+        .asset-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h4,
+            p {
+                color: rgb(var(--light-brown));
+                margin: 0;
+            }
+
+            p {
+                opacity: 85%;
+            }
+        }
+
+        .announcement-info {
+            position: absolute;
+            bottom: 0px;
+            height: 43%;
+            width: 100%;
+            background: white;
+
+            [theme="dark-mode"] & {
+                background: rgb(var(--dark-blue));
+            }
+
+            border-color: rgb(var(--light-brown));
+            border-style: solid;
+            border-radius: 10px;
+            border-width: 2px 0px 0px 0px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            justify-content: space-evenly;
+            padding-left: 20px;
+        }
+
+        .announcements-back {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .announcements-background {
+            width: 100%;
+            height: 298px;
+            display: block;
+            background: white;
+            background-image: url(/custom/widgets/SSP/images/Al-Haramain_Brand_Element_Transparent_Background_Pattern.png);
+
+            [theme="dark-mode"] & {
+                background: rgb(var(--dark-blue));
+                background-image: url(/custom/widgets/SSP/images/Al-Haramain_Brand_Element_Transparent_Background_Pattern.png);
+            }
+        }
+
+        .announcement-info-header {
+            text-align: start;
+        }
+
+        .announcement-info-header-title {
+            color: rgba(var(--light-brown), 1);
+            font-weight: 900;
+        }
+
+        .announcement-info-header-subtitle {
+            font-size: smaller;
+            color: rgba(var(--light-brown), 0.85);
+        }
+
+        .announcement-info-footer {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(var(--light-brown), 0.85);
+        }
+
+        .announcement-date-info {
+            width: 50%;
+            display: flex;
+            column-gap: 20px;
+            font-size: small;
+            text-wrap: nowrap;
+            column-gap: 10px;
+        }
+
+        .announcement-taps {
+            display: flex;
+            column-gap: 2px;
+        }
+
+        .announcement-tap,
+        .announcement-active-tap {
+            height: 3px;
+            width: 16px;
+            border-radius: 50px;
+        }
+
+        .announcement-tap {
+            background-color: rgba(217, 217, 217, 0.20);
+        }
+
+        .announcement-active-tap {
+            background-color: rgba(var(--light-brown), 1) !important;
+        }
+
+        .announcement-more-info {
+            width: 18%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            column-gap: 4px;
+            padding: 0px 10px;
+        }
+
+        .announcement-more {
+            font-style: italic;
+            font-weight: 700;
+            font-family: 'Amiri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: large;
+            color: rgba(var(--light-brown), 1);
+        }
+
+        .announcement-date-icon {
+            font-size: large;
+            padding-right: 8px;
+            size: 15px;
+        }
+
+        /* toggle button styles */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .bi.bi-moon-stars {
+            position: relative;
+            z-index: 10;
+            height: 26px;
+            left: 12px;
+            bottom: 0px;
+        }
+
+        .bi.bi-sun {
+            position: relative;
+            z-index: 10;
+            height: 26px;
+            left: 9px;
+            bottom: -4px;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: rgb(var(--light-brown), 0.7);
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px rgb(var(--light-brown), 0.7);
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(27px);
+            -ms-transform: translateX(27px);
+            transform: translateX(27px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <label class="switch nightmodeSwitch" id="nightmode">
+        <input class="togglechk" name="mode" data-event="change" data-handler="ThemeCustomizer.nightMode(this)"
+            nonce="r7idY63BCyKtdirNBOD0IQ==" onclick="toggleDarkMode(this)" type="checkbox">
+        <span class="slider round"><i class="bi bi-sun"><i class="bi bi-moon-stars"></i></i></span>
+    </label>
+
+    <div class="qaaba">
+        <div class="qaaba-img-wrapper">
+            <div class="bg"></div>
+            <div class="qaaba-img">
+                <img src="/custom/widgets/SSP/images/Al-Harram.gif">
+            </div>
+        </div>
+        <div class="qaaba-title">
+            <img class="logo" src="/custom/widgets/SSP/images/Alternative_Al-Haramain_Logo_Transparent.png">
+            <h4 dir="rtl">نستوجب منا حمدا لله سبحانه وتعالى ما اكرم به بلادنا من خدمة الحرمين الشريفين ورعاية الحجاج
+                والمعتمرين والزوار وحرصها الدائم على التطوير المستمر للمشاعر المقدسة والخدمات مبا يكفل اداء النسك بكل
+                يسر وسهولة</h4>
+        </div>
+    </div>
+
+    <div class="divider">
+        <h2>الأقسام والخدمات</h2>
+    </div>
+
+    <div dir="rtl" class="actions-wrapper">
+        <div id="service-catalogs"></div>
+        <div id="selected-catalog"></div>
+    </div>
+
+    <div class="divider">
+        <h2>الإحصائات</h2>
+    </div>
+
+    <div class="data-wrapper">
+        <div id="pieChartContainer"></div>
+        <div id="columnChartContainer"></div>
+    </div>
+
+    <div class="divider">
+        <h2>الأصول والإعلانات</h2>
+    </div>
+
+    <div class="announcements-and-assets-wrapper">
+        <div class="announcements-wrapper">
+
+            <div class="announcements-back">
+                <div class="announcements-background">
+                </div>
+                <div class="announcement-info">
+                    <a style="text-decoration: none;" id="current-anncouncement-head" href="">
+                        <div class="announcement-info-header">
+                            <h4 id="current-anncouncement-title" class="announcement-info-header-title"></h4>
+                            <span id="current-anncouncement-subtitle" class="announcement-info-header-subtitle"></span>
+                        </div>
+                    </a>
+                    <div class="announcement-info-footer">
+                        <div class="announcement-date-info">
+                            <i class="bi bi-calendar2 announcement-date-icon"></i>
+                            <span id="current-anncouncement-date"></span>
+
+                            <i class="bi bi-globe-central-south-asia announcement-date-icon"></i>
+                            <span id="current-anncouncement-publicity"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="assets-wrapper">
+            <div id="assets-list" class="assets-list">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var requestChartData = [];
+
+        function toggleDarkMode(toggle) {
+
+            var element = document.body;
+
+            if (window.parent.ThemeCustomizer !== undefined) {
+                window.parent.ThemeCustomizer?.nightMode(toggle)
+            } else {
+                if (element.hasAttribute("theme")) {
+                    element.removeAttribute("theme")
+                } else {
+                    element.setAttribute("theme", "dark-mode");
+                }
+            }
+
+
+            if (element.hasAttribute("theme")) {
+                pieChartConfig.backgroundColor = "#22323d";
+                pieChartConfig.axisY.interlacedColor = "#22323d";
+                columnChartConfig.theme = "dark1";
+            } else {
+                pieChartConfig.backgroundColor = "white";
+                pieChartConfig.axisY.interlacedColor = "whitesmoke";
+                columnChartConfig.theme = "light1";
+            }
+
+            location.reload();
+        };
+
+        function getCount(requestType) {
+            return requestChartData?.find(r => r.Title == requestType)?.count ?? 0;
+        };
+
+        function goToLocation(elementData) {
+            window.parent.location.href = requestChartData?.find(r => r.Title == elementData.dataPoint.name)?.url;
+        };
+
+        var announcementsInputObj = { "list_info": { "row_count": "10", "get_total_count": "true", "sort_field": "id", "sort_order": "asc" } };
+
+        var currentIndex = 0;
+
+        var announcements;
+
+        function updateAnnouncement() {
+            if (announcements && announcements.length > 0) {
+                var currentAnnouncement = announcements[currentIndex];
+
+                jQuery("#current-anncouncement-title").fadeOut(300, function () {
+                    jQuery(this).html('<a id="current-anncouncement-head" href="" onclick="window.parent.$announcements.viewAnnouncement(\'' + currentAnnouncement.id.trim() + '\')"><div class="announcement-info-header"><h4 id="current-anncouncement-title" class="announcement-info-header-title">' + currentAnnouncement.title + '</h4><span id="current-anncouncement-subtitle" class="announcement-info-header-subtitle"></span></div></a>' ?? "Templates for Field and Form Rules").fadeIn(300);
+                });
+
+                jQuery("#current-anncouncement-subtitle").fadeOut(300, function () {
+                    jQuery(this).html((currentAnnouncement?.content?.length < 100 ? currentAnnouncement?.content : currentAnnouncement?.announcement_type?.description) ?? "With filed and form rules, the administrator can decide on the fields to be...").fadeIn(300);
+                });
+
+                jQuery("#current-anncouncement-date").fadeOut(300, function () {
+                    jQuery(this).html(currentAnnouncement?.from_date?.display_value).fadeIn(300);
+                });
+
+                jQuery("#current-anncouncement-publicity").fadeOut(300, function () {
+                    jQuery(this).html(currentAnnouncement?.is_public ? "Public" : "Private").fadeIn(300);
+                });
+
+
+                jQuery(".announcement-tap").removeClass("announcement-active-tap");
+                jQuery(".announcement-tap").eq(currentIndex).addClass("announcement-active-tap");
+
+
+                currentIndex = (currentIndex + 1) % announcements.length;
+            }
+        }
+
+        function fetchAnnouncements() {
+            var announcementsInputObj = { "list_info": { "filter_by": { "name": "currently_showing" }, "row_count": 10, "get_total_count": "true", "sort_field": "from_date", "sort_order": "desc" } };
+
+            jQuery.ajax({
+                url: '/api/v3/announcements',
+                type: 'GET',
+                data: { "input_data": JSON.stringify(announcementsInputObj) },
+                success: function (response) {
+                    announcements = response?.announcements;
+                    updateAnnouncement();
+
+                    announcements?.forEach((element, index) => {
+                        jQuery(".announcement-taps").append("<div id='announcement-" + index + "' class='announcement-tap'></div>");
+                    });
+
+                    if (announcements?.length === 0) {
+                        jQuery("#current-anncouncement-title").html("There are no new announcements today");
+                        jQuery("#current-anncouncement-subtitle").html("N/A");
+                        jQuery("#current-anncouncement-date").html("N/A");
+                        jQuery("#current-anncouncement-publicity").html("N/A");
+                    }
+
+                },
+                error: function (error) {
+                    console.error("Error fetching announcements:", error);
+                    jQuery("#current-anncouncement-title").html("Error Fetching Announcements");
+                    jQuery("#current-anncouncement-subtitle").html("Please try again later.");
+                    jQuery("#current-anncouncement-date").html("N/A");
+                    jQuery("#current-anncouncement-publicity").html("N/A");
+                }
+            });
+        };
+
+        function fetchAssets() {
+            var user_id = parent?.sdp_user?.LOGGEDIN_USERID;
+
+            var assetsInputObj = {
+                "list_info": {
+                    "row_count": 100,
+                    "start_index": 0,
+                    "sort_field": "id",
+                    "sort_order": "asc",
+                    "get_total_count": true,
+                }
+            }
+
+            jQuery.ajax({
+                url: '/api/v3/users/' + user_id + "/associated_assets",
+                type: 'GET',
+                data: { "input_data": JSON.stringify(assetsInputObj) },
+                success: function (assetsResponse) {
+                    var assets = assetsResponse.associated_assets;
+                    if (assets.length > 0) {
+                        assets.forEach((element, index) => {
+                            jQuery("#assets-list").append(
+                                "<div class='asset'>" +
+                                "<img class='asset-icon' src='" + element.image_file_name + "'>" +
+                                "<div class='asset-info'>" +
+                                "<h4>" + element.asset.name + "</h4>" +
+                                "<p style='opacity: 90%;' >" + element.product_type?.name + "</p>" +
+                                "</div></div>");
+                        })
+                    } else {
+                        jQuery("#assets-list").append("<h5 class='asset-none'>No Asset Available</h5>")
+                    }
+
+                },
+                error: function (error) {
+                    jQuery("#assets-list").append("<h5 class='asset-none'>No Asset Available</h5>")
+                }
+            })
+        }
+
+        var serviceCatalogs;
+
+        var selectedCatalog = document.getElementById("selected-catalog");
+
+        function collapse(panel) {
+
+            if ($(panel).children()[1].classList.contains("is-selected")) {
+                $(panel).children()[1].classList.remove("is-selected")
+            } else {
+                $(panel).children()[1].classList.add("is-selected")
+            }
+        }
+
+        function selectCatalog(catalog, catalogId) {
+            catalog.parentElement.childNodes.forEach(child => child?.classList?.remove('is-selected'));
+
+            catalog.classList.add('is-selected');
+
+            var selected = serviceCatalogs.find(catalog => catalog.id == catalogId);
+
+            var servicesTemplates = selected.templates.filter(temp => temp.is_service_template === true);
+            var incidentsTemplates = selected.templates.filter(temp => temp.is_service_template === false);
+
+            console.log("service and incedints:", {
+                services: servicesTemplates,
+                incident: incidentsTemplates
+            });
+
+            var services = "";
+
+            if (servicesTemplates.length > 0) {
+                services += "<h4 id='service-type'>الخدمات</h4>\n";
+
+                servicesTemplates.forEach(template => {
+                    services +=
+                        "<a target='_blank' href='/WorkOrder.do?woMode=newWO&reqTemplate=" + template.id + "&PORTALID=1'>\n"
+                        + "<div class='service'>\n"
+                        + "<i class='service-start bi bi-arrow-left'></i>\n"
+
+                        + "<div class='service-head'>"
+                        + "<img src='" + template.icon["content-url"] + "' onerror='this.src=\"/custom/widgets/SSP/images/Alternative_Al-Haramain_Logo_Transparent.png\"'>\n"
+                        + "<h5>" + template.name + "</h5>\n"
+                        + "</div>\n"
+
+                        + "<div class='service-info'>\n"
+                        + "<p dir='rtl'>" + template.description + "</p>\n"
+                        + "</div>\n</div>\n</a>\n"
+                });
+            }
+
+            if (incidentsTemplates.length > 0) {
+                services += "<h4 id='service-type' class='incident'>المشكلات</h4>\n";
+
+                incidentsTemplates.forEach(template => {
+                    services +=
+                        "<a target='_blank' href='/WorkOrder.do?woMode=newWO&reqTemplate=" + template.id + "&PORTALID=1'>\n"
+                        + "<div class='service incident'>\n"
+                        + "<i class='service-start bi bi-arrow-left'></i>\n"
+
+                        + "<div class='service-head'>"
+                        + "<img src='" + template.icon["content-url"] + "' onerror='this.src=\"/custom/widgets/SSP/images/Alternative_Al-Haramain_Logo_Transparent.png\"'>\n"
+                        + "<h5>" + template.name + "</h5>\n"
+                        + "</div>\n"
+
+                        + "<div class='service-info'>\n"
+                        + "<p dir='rtl'>" + template.description + "</p>\n"
+                        + "</div>\n</div>\n</a>\n"
+                });
+            }
+
+
+            $(selectedCatalog).fadeOut(300, function () {
+                $(this).html(services).fadeIn(300);
+            });
+        }
+
+        const addCatalog = (element, index) => {
+            var group = "<div class='catalog-head' onclick=selectCatalog(this," + element.id + ") >" + "<img src='/" + element.image + "'>\n" + "<h4>" + element.name + "</h4>" + "</div>\n";
+
+            $("#service-catalogs").append(group);
+        }
+
+        function fetchServiceCatalog() {
+            var service_input_data = { "list_info": { "row_count": "100", "start_index": 1, "filter_by": { "name": "hasMergedTemplates" }, "fields_required": ["id", "name", "description", "image", "sort_index", "templates"] } };
+
+            jQuery.ajax({
+                url: '/api/v3/requests/service_category',
+                type: 'GET',
+                data: { "input_data": JSON.stringify(service_input_data) },
+                success: function (response) {
+                    serviceCatalogs = response.service_category
+                },
+                error: function (error) {
+                    serviceCatalogs = [
+                        {
+                            "name": "Application Login",
+                            "image": "../custom/serviceicons/application-login.svg",
+                            "description": "Services related to application login like creating CRM account, SAP account, MSSQL account, Active Directory account, etc., are listed under this service category.",
+                            "id": "1",
+                            "templates": [
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Unable to copy data from File server",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user is not able to copy data from File server to user machine",
+                                    "id": 51
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Unable to login into ERP",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user is not able to login into ERP application using user credentials",
+                                    "id": 49
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Unable to login into File server",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user is not able to login into File server using user credentials",
+                                    "id": 50
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Unable to login into PC",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user is not able to login into PC using Active directory credentials",
+                                    "id": 48
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a CRM account",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/8/images/102",
+                                        "id": 102
+                                    },
+                                    "description": "This service template is used to request CRM account creation",
+                                    "id": 8
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request account deletion from Active Directory",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/20/images/80",
+                                        "id": 80
+                                    },
+                                    "description": "This service template is used to request an AD account deletion",
+                                    "id": 20
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request an account creation in Active Directory",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/19/images/79",
+                                        "id": 79
+                                    },
+                                    "description": "This service template is used to request an account creation in Active Directory",
+                                    "id": 19
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request an MSSQL account",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/9/images/110",
+                                        "id": 110
+                                    },
+                                    "description": "This service template is used to request access to the MSSQL server running for their team",
+                                    "id": 9
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request reset password for an AD Account",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/42/images/113",
+                                        "id": 113
+                                    },
+                                    "description": "This service template is used to request password reset for their AD Account",
+                                    "id": 42
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Communication",
+                            "image": "../custom/serviceicons/communication.svg",
+                            "description": "Services related with communication like requesting for a telephone or DID extension, a mobile phone for on-call support, a blackberry or an iPhone for testing purpose, etc., are listed under this category.",
+                            "id": "2",
+                            "templates": [
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Telephone extension not configured",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user desk telephone extension is not configured",
+                                    "id": 54
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Telephone not working",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user telephone is not working properly",
+                                    "id": 53
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a BlackBerry",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/15/images/101",
+                                        "id": 101
+                                    },
+                                    "description": "This service template is used to request a BlackBerry",
+                                    "id": 15
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a DID extension",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/16/images/106",
+                                        "id": 106
+                                    },
+                                    "description": "This service template is used to request a DID extension for them",
+                                    "id": 16
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a mobile phone for on-call support",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/34/images/109",
+                                        "id": 109
+                                    },
+                                    "description": "This service template is used to request mobile phone for on-call support.",
+                                    "id": 34
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a telephone extension",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/47/images/112",
+                                        "id": 112
+                                    },
+                                    "description": "This service template is used to request a telephone extension for them",
+                                    "id": 47
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request an iPhone",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/22/images/100",
+                                        "id": 100
+                                    },
+                                    "description": "This service template is used to request an iPhone",
+                                    "id": 22
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request Voice Message Password reset",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/12/images/118",
+                                        "id": 118
+                                    },
+                                    "description": "This service template is used to request password reset for their voice messages",
+                                    "id": 12
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request Voice Messages clean up",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/13/images/117",
+                                        "id": 117
+                                    },
+                                    "description": "This service template is used to request voice messages clean up",
+                                    "id": 13
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Data Management",
+                            "image": "../custom/serviceicons/data-managagement.svg",
+                            "description": "Services related to data management like performing backups, restore and clean up data are placed in this service category.",
+                            "id": "3",
+                            "templates": [
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request data backup",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/24/images/103",
+                                        "id": 103
+                                    },
+                                    "description": "This service template is used to request to do a data backup",
+                                    "id": 24
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request data restoration from backup",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/43/images/104",
+                                        "id": 104
+                                    },
+                                    "description": "This service template is used to request data restoration from backup",
+                                    "id": 43
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Email",
+                            "image": "../custom/serviceicons/email.svg",
+                            "description": "Services related to email like creating an email account, email client installation, password reset for email account, creating a mailing list, adding and removing members from the mailing list, etc., placed under this category.",
+                            "id": "4",
+                            "templates": [
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Email attachment problem",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when there is any problem in email attachments",
+                                    "id": 61
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Mail fetching",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used to create request when there is problem in mail fetching",
+                                    "id": 3
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a member addition to an existing mailing list",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/33/images/94",
+                                        "id": 94
+                                    },
+                                    "description": "This service template is used to request addition of a member to an existing mailing list",
+                                    "id": 33
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a new email account creation",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/35/images/96",
+                                        "id": 96
+                                    },
+                                    "description": "This service template is used to request a new email account creation for them. New email account will be created with our domain(xyz.com) by default.",
+                                    "id": 35
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a new mailing list creation",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/37/images/93",
+                                        "id": 93
+                                    },
+                                    "description": "This service template is used to request a new mailing list creation for their team",
+                                    "id": 37
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request an email client installation",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/27/images/92",
+                                        "id": 92
+                                    },
+                                    "description": "This service template is used to request installation of an email client in their machine",
+                                    "id": 27
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request an increased email storage",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/30/images/90",
+                                        "id": 90
+                                    },
+                                    "description": "This service template is used to request an increased email storage",
+                                    "id": 30
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request creation of an alias for a mailing list",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/6/images/82",
+                                        "id": 82
+                                    },
+                                    "description": "This service template is used to request alias creation for an existing mailing list.",
+                                    "id": 6
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request deletion of an email account",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/25/images/85",
+                                        "id": 85
+                                    },
+                                    "description": "This service template is used to request deletion of an existing email account",
+                                    "id": 25
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request password reset for your email account",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/39/images/99",
+                                        "id": 99
+                                    },
+                                    "description": "This service template is used to request password reset for their email account",
+                                    "id": 39
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request removal of a member from an existing mailing list",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/40/images/95",
+                                        "id": 95
+                                    },
+                                    "description": "This service template is used to request removal of a member from an existing mailing list",
+                                    "id": 40
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request removal of an existing mailing alias",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/41/images/83",
+                                        "id": 83
+                                    },
+                                    "description": "This service template is used to request removal of an existing mailing alias",
+                                    "id": 41
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Hardware",
+                            "image": "../custom/serviceicons/hardware.svg",
+                            "description": "Services related to hardware purchase, upgrading RAM, requesting a laptop or a desktop, etc., are placed under this service category.",
+                            "id": "5",
+                            "templates": [
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Keyboard problem",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user keyboard is not working properly",
+                                    "id": 55
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Monitor display problem",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user monitor is not displaying properly",
+                                    "id": 56
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Mouse not working",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user mouse is not working properly",
+                                    "id": 59
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "PC does not boot",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user PC does not boot",
+                                    "id": 58
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Printer problem",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used to create request when there is problem in printer",
+                                    "id": 5
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Unable to remote to a PC",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user is not able to take remote control over another PC",
+                                    "id": 57
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Wireless connection not working",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when user is not able to connect to network in wireless mode",
+                                    "id": 60
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a Laptop",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/17/images/107",
+                                        "id": 107
+                                    },
+                                    "description": "This service template is used to request a new laptop",
+                                    "id": 17
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a new Desktop",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/18/images/105",
+                                        "id": 105
+                                    },
+                                    "description": "This service template is used to request a new desktop",
+                                    "id": 18
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request RAM upgrade",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/10/images/111",
+                                        "id": 111
+                                    },
+                                    "description": "This service template is used to request RAM upgrade in their machine",
+                                    "id": 10
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Internet",
+                            "image": "../custom/serviceicons/internet.svg",
+                            "description": "Services related to internet access, WiFi access, creating a VPN account, booking a domain, proxy configuration, etc., are placed under this service category.",
+                            "id": "6",
+                            "templates": [
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Network is slow",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when the network connection is slow",
+                                    "id": 62
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a file download from an external website",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/28/images/88",
+                                        "id": 88
+                                    },
+                                    "description": "This service template is used to request a file download from external website",
+                                    "id": 28
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a file upload",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/29/images/89",
+                                        "id": 89
+                                    },
+                                    "description": "This service template is used to request a file upload to an external website",
+                                    "id": 29
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a VPN account creation",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/11/images/119",
+                                        "id": 119
+                                    },
+                                    "description": "This service template is used to request VPN account for them",
+                                    "id": 11
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request an online meeting setup",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/38/images/98",
+                                        "id": 98
+                                    },
+                                    "description": "This service template is used to setup online meeting with customers/vendors",
+                                    "id": 38
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request internet access",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/31/images/91",
+                                        "id": 91
+                                    },
+                                    "description": "This service template is used to request internet access",
+                                    "id": 31
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request WiFi access",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/14/images/120",
+                                        "id": 120
+                                    },
+                                    "description": "This service template is used to request wireless access to the internet from their machine",
+                                    "id": 14
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Software",
+                            "image": "../custom/serviceicons/software.svg",
+                            "description": "Services related to software installation/un-installation, software purchase, license purchase, software upgrade, etc., are placed under this service category.",
+                            "id": "7",
+                            "templates": [
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Application crashes frequently",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "This template is used when an application crashes / hangs frequently",
+                                    "id": 52
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a software installation",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/44/images/114",
+                                        "id": 114
+                                    },
+                                    "description": "This service template is used to request a software installation in their machine",
+                                    "id": 44
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a software uninstallation",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/45/images/115",
+                                        "id": 115
+                                    },
+                                    "description": "This service template is used to request a software uninstallation",
+                                    "id": 45
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request a software upgrade",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/46/images/116",
+                                        "id": 116
+                                    },
+                                    "description": "This service template is used to request a software upgrade",
+                                    "id": 46
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request an additional Client Access License",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/21/images/81",
+                                        "id": 81
+                                    },
+                                    "description": "This service template is used to request a additional client access license for any software which requires it",
+                                    "id": 21
+                                }
+                            ]
+                        },
+                        {
+                            "name": "User Management",
+                            "image": "../custom/serviceicons/user-management.svg",
+                            "description": "Services related to hiring a new employee, requesting a department/place change, etc., are placed under this category.",
+                            "id": "8",
+                            "templates": [
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request change of place",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/23/images/84",
+                                        "id": 84
+                                    },
+                                    "description": "This service template is used to request smooth transition of services associated to the place change",
+                                    "id": 23
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request to start the process associated to a new hire",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/36/images/97",
+                                        "id": 97
+                                    },
+                                    "description": "This service template is used to request to start the process associated to new employee joining our organization.",
+                                    "id": 36
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request to start the process associated to department change of a user",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/26/images/86",
+                                        "id": 86
+                                    },
+                                    "description": "This service template is used to request to start the process associated to department change of a user",
+                                    "id": 26
+                                },
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": true,
+                                    "name": "Request to start the process for an employee leaving",
+                                    "icon": {
+                                        "content-url": "/api/v3/requests/template/7/images/87",
+                                        "id": 87
+                                    },
+                                    "description": "This service template is used to request to start the process for an employee leaving the organization",
+                                    "id": 7
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Others",
+                            "image": "../custom/serviceicons/scat-ico-file.gif",
+                            "description": "Others",
+                            "is_deleted": false,
+                            "id": "-1",
+                            "templates": [
+                                {
+                                    "is_enabled": true,
+                                    "inactive": false,
+                                    "is_service_template": false,
+                                    "name": "Default Request",
+                                    "icon": {
+                                        "content-url": "/custom/templateicons/incident-default.svg"
+                                    },
+                                    "description": "Default template used for new request creation.",
+                                    "id": 1
+                                }
+                            ]
+                        }
+                    ];
+                },
+                complete: function () {
+                    serviceCatalogs.forEach(addCatalog);
+                }
+            });
+        }
+
+
+        function getRequestStats(item) {
+            var inputObj = { "list_info": { "start_index": 1, "sort_field": "requester.name", "get_total_count": true } };
+
+            var data = inputObj.list_info.search_fields, inputData, count, html;
+
+            inputObj.list_info.filter_by = item.filter_by;
+
+            inputData = JSON.stringify(inputObj);
+
+            jQuery.ajax({
+                url: '/api/v3/requests',
+                async: false,
+                type: 'GET',
+                data: { "input_data": inputData },
+                success: function (resp) {
+                    count = resp.list_info.total_count;
+                    var url = "/WOListView.do?&input_data=" + encodeURIComponent(inputData);
+                    requestChartData.push({ count: count, Title: item.id, url: url });
+                },
+                error: function (error) {
+                    requestChartData.push({ count: Math.random(), Title: item.id, url: "/WOListView.do?&input_data=" + encodeURIComponent(inputData) });
+                }
+            });
+        }
+
+        var pieChart, pieChartConfig, columnChart, columnChartConfig;
+
+        jQuery(document).ready(function () {
+
+            window.parent.document.getElementsByClassName("widget-header")?.item(0)?.remove();
+
+            var metaData = [
+                { "filter_by": { "name": "All_Pending_Requester" }, "id": "PendingRequests" },
+                { "filter_by": { "name": "My_Pending_Request_Awaiting_approval" }, "id": "AwaitedRequests" },
+                { "filter_by": { "name": "Onhold_Requester" }, "id": "OnHoldRequests" },
+                { "filter_by": { "name": "Closed_Requester" }, "id": "ClosedRequests" }
+            ];
+
+            metaData.forEach(item => {
+                getRequestStats(item);
+            });
+
+            pieChartConfig = {
+                animationEnabled: true,
+                theme: "dark2",
+                backgroundColor: "white",
+
+                axisY: {
+                    title: "(إجمالي الأعداد)",
+                    fontFamily: "Segoe UI",
+                    titleFontColor: "#bb9661",
+                    gridColor: "#d0d8dd",
+                    interlacedColor: "whitesmoke",
+                    tickColor: "#d0d8dd",
+                    labelFontColor: "#bb9661"
+                },
+                axisX: {
+                    lineColor: "#d0d8dd",
+                    tickColor: "#d0d8dd",
+                    labelFontColor: "#bb9661",
+                    fontFamily: "Segoe UI"
+                },
+                legend: {
+                    fontColor: "#bb9661",
+                    fontFamily: "Segoe UI"
+                },
+                data: [{
+                    type: "column",
+                    color: "#bb9661",
+                    showInLegend: true,
+                    legendMarkerColor: "#bb9661",
+                    legendText: "عدد الطلبات بحالة الطلب",
+                    legendFontColor: "#bb9661",
+                    fontFamily: "Segoe UI",
+                    dataPoints: [
+                        { name: 'PendingRequests', y: getCount('PendingRequests'), label: "(Processing) يتم تنفيذه", click: goToLocation },
+                        { name: 'AwaitedRequests', y: getCount('AwaitedRequests'), label: "(Awaited) في الإنتظار", click: goToLocation },
+                        { name: 'OnHoldRequests', y: getCount('OnHoldRequests'), label: "(On hold) موقوف مؤقتاً", click: goToLocation },
+                        { name: 'ClosedRequests', y: getCount('ClosedRequests'), label: "(Completed) مكتمل", click: goToLocation },
+                    ]
+                }]
+            };
+
+            pieChart = new CanvasJS.Chart("pieChartContainer", pieChartConfig);
+
+            columnChartConfig = {
+                theme: "light2", // "light1", "light2", "dark1", "dark2"
+                exportEnabled: true,
+                animationEnabled: true,
+                title: {
+                    text: "نسب الطلبات بحالة الطلب",
+                    fontColor: "#bb9661",
+                    fontFamily: "Segoe UI",
+                    fontSize: 22
+                },
+                legend: {
+                    fontColor: "#bb9661",
+                    fontFamily: "Segoe UI"
+                },
+                data: [{
+                    type: "pie",
+                    startAngle: 25,
+                    toolTipContent: "<b>{label}</b>: {y}%",
+                    showInLegend: "true",
+                    legendText: "{label}",
+                    indexLabelFontSize: 16,
+                    indexLabelFontColor: "#bb9661",
+                    indexLabel: "{label} - {y}%",
+                    dataPoints: [
+                        { name: 'PendingRequests', y: getCount('PendingRequests'), label: "(Processing) يتم تنفيذه", click: goToLocation },
+                        { name: 'AwaitedRequests', y: getCount('AwaitedRequests'), label: "(Awaited) في الإنتظار", click: goToLocation },
+                        { name: 'OnHoldRequests', y: getCount('OnHoldRequests'), label: "(On hold) موقوف مؤقتاً", click: goToLocation },
+                        { name: 'ClosedRequests', y: getCount('ClosedRequests'), label: "(Completed) مكتمل", click: goToLocation },
+                    ]
+                }]
+            };
+
+            columnChart = new CanvasJS.Chart("columnChartContainer", columnChartConfig);
+
+            fetchAssets();
+
+            fetchAnnouncements();
+
+            setInterval(updateAnnouncement, 5000);
+
+            var currentAnncouncementHead = document.getElementById("current-anncouncement-head");
+
+            currentAnncouncementHead.addEventListener("click", function () { window.parent.$announcements.viewAnnouncement(announcements[currentIndex].id) })
+
+            fetchServiceCatalog();
+
+            setTimeout(() => {
+                let isDarkMode = document.body.hasAttribute("theme");
+                $(".togglechk")[0].checked = isDarkMode;
+
+                if (isDarkMode) {
+                    pieChartConfig.backgroundColor = "#22323d";
+                    pieChartConfig.axisY.interlacedColor = "#22323d";
+                    columnChartConfig.theme = "dark1";
+                } else {
+                    pieChartConfig.backgroundColor = "white";
+                    pieChartConfig.axisY.interlacedColor = "whitesmoke";
+                    columnChartConfig.theme = "light1";
+                }
+
+                pieChart.render();
+                columnChart.render();
+            }, 1500);
+
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</body>
+
+</html>

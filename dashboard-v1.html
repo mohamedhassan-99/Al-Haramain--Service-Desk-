@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Al-Haramen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="/scripts/IncludeSDPScripts.js?build=14620" type="text/javascript"></script>
+    <script src="/scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: rgba(var(--light-brown), 0.2) !important;
+            border-radius: 5px !important;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgba(var(--light-brown), 1) !important;
+            border-radius: 5px !important;
+        }
+
+        body {
+            --light-brown: 187, 150, 97;
+            --dark-blue: 34, 50, 61;
+            --light-brown-color: #bb9661;
+            --dark-blue-color: #22323d;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(var(--dark-blue));
+            padding: 40px;
+            gap: 30px;
+        }
+
+        
+        body[theme="dark-mode"] {
+            --light-brown: 187, 150, 97;
+            --dark-blue: 255, 255, 255;
+            --light-brown-color: #ffffff;
+            --dark-blue-color: #22323d;
+            /* background-color: rgb(var(--dark-blue)); */
+        }
+
+        h4 {
+            color: rgb(var(--light-brown));
+            font-size: large;
+            font-weight: 500;
+        }
+
+        .qaaba {
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 1;
+            max-height: 400px;
+            min-height: 200px;
+            min-width: 100%;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            overflow: hidden;
+            mask: linear-gradient(to top, rgba(0, 0, 0, 0) 2%, rgb(0, 0, 0) 5%);
+        }
+
+        .qaaba .qaaba-img {
+            width: 60%;
+            margin: 20px;
+            object-fit: contain;
+            mask-image:
+                linear-gradient(to bottom, #000, #000),
+                linear-gradient(to bottom, #000, #000),
+                linear-gradient(to bottom, #000, #000),
+                linear-gradient(to bottom, #000, #000),
+                linear-gradient(to bottom, #000, #000);
+            mask-size: 18% 70%;
+            mask-position: 0 100%, 25% 25%, 50% 50%, 75% 0, 100% 50%;
+            mask-repeat: no-repeat;
+            /* animation: mask-movement 12s linear infinite alternate; */
+
+            img {
+                animation: scale-loop 15s ease-in-out 0s infinite alternate;
+                opacity: 80%;
+            }
+        }
+
+        .qaaba .qaaba-title {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            background-color: rgb(var(--dark-blue));
+        }
+
+        .qaaba .logo {
+            height: 180px;
+            width: 343px;
+            align-self: end;
+            display: block;
+
+            [theme="dark-mode"] & {
+                display: none;
+            }
+        }
+
+        .qaaba .logo-dark {
+            height: 180px;
+            width: 343px;
+            align-self: end;
+            display: none;
+
+            [theme="dark-mode"] & {
+                display: block;
+            }
+        }
+
+        .divider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            background-image: url(/custom/widgets/SSP/images/Al-Haramain_Brand_Element_Large_Bar_With_Borders.png);
+            background-size: contain;
+            background-repeat: repeat-x;
+            min-height: 95px;
+            min-width: 100%;
+            mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 2%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 98%);
+
+
+            [theme="dark-mode"] & {
+                background-image: url(/custom/widgets/SSP/images/Al-Haramain_White_Brand_Element_Large_Bar_With_Borders.png);
+            }
+
+            h2 {
+                color: rgb(var(--light-brown));
+                background-color: rgb(var(--dark-blue));
+                text-shadow: 0px 0px 20px rgb(var(--light-brown));
+            }
+        }
+
+
+        @keyframes scale-loop {
+            0% {
+                transform: scale(100%) translate(0, 0);
+            }
+
+            100% {
+                transform: scale(110%) translate(-5%, -5%);
+            }
+        }
+
+        .actions-and-data-wrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            width: 85%;
+            padding: 0px 30px;
+            overflow: hidden;
+        }
+
+        .actions-wrapper {
+            min-height: 300px;
+            min-width: 35%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            align-items: start;
+            animation: slide-in 2s cubic-bezier(0.42, 0, 0.84, 1.17) forwards;
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateX(300px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .actions-wrapper .action {
+            min-width: 100%;
+            border: 2px solid rgb(var(--light-brown));
+            border-radius: 5px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: flex-end;
+            color: rgb(var(--light-brown));
+            padding: 4px;
+            text-align: end;
+            text-wrap: balance;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            i {
+                background-color: rgba(var(--light-brown), 10%);
+                color: rgb(var(--light-brown));
+                font-size: xx-large;
+                padding: 10px;
+                border-radius: 5%;
+            }
+        }
+
+        .actions-wrapper .action:hover {
+            transform: translateY(-5%) scale(1.1);
+            box-shadow: 0px 0px 10px rgb(var(--light-brown));
+            color: rgb(var(--dark-blue));
+            background-color: rgb(var(--light-brown));
+
+            h4 {
+                color: rgb(var(--dark-blue));
+            }
+
+            i {
+                color: rgb(var(--dark-blue));
+                background-color: rgb(var(--dark-blue), 10%);
+            }
+        }
+
+        .action .action-info {
+
+            p,
+            h4 {
+                margin: 0;
+            }
+        }
+
+        .data-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 65%;
+        }
+
+        .announcements-and-assets-wrapper {
+            width: 80%;
+            height: 370px;
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: end;
+            gap: 20px;
+        }
+
+        .announcements-wrapper {
+            border: 2px solid rgb(var(--light-brown));
+            min-height: 300px;
+            min-width: 70%;
+            border-radius: 5px;
+            background-color: rgb(var(--dark-blue), 10%);
+            overflow: hidden;
+        }
+
+        .assets-wrapper {
+            width: 30%;
+            height: 300px;
+            display: flex;
+            text-align: start;
+            row-gap: 12px;
+        }
+
+        .assets-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 7px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .asset {
+            min-height: 70px;
+            background-color: rgba(var(--light-brown), 10%);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: 3px;
+        }
+
+        .asset-icon {
+            width: 40px;
+            height: 40px;
+            padding: 9px;
+            margin: 0px 6px;
+            border-radius: 2px;
+            background-color: rgba(var(--light-brown), 0.5);
+            display: flex;
+            object-fit: cover;
+        }
+
+        .asset-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h4,
+            p {
+                color: rgb(var(--light-brown));
+                margin: 0;
+            }
+
+            p {
+                opacity: 85%;
+            }
+        }
+
+        .announcement-info {
+            position: absolute;
+            bottom: 0px;
+            height: 43%;
+            width: 100%;
+            background: rgba(var(--light-brown), 0.85);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            justify-content: space-evenly;
+            padding-left: 20px;
+        }
+
+        .announcement-info-header {
+            text-align: start;
+        }
+
+        .announcement-info-header-title {
+            color: rgba(var(--dark-blue), 1);
+            font-weight: 700;
+        }
+
+        .announcement-info-header-subtitle {
+            font-size: smaller;
+            color: rgba(var(--dark-blue), 0.85);
+        }
+
+        .announcement-info-footer {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(var(--dark-blue), 0.85);
+        }
+
+        .announcement-date-info {
+            width: 50%;
+            display: flex;
+            column-gap: 20px;
+            font-size: small;
+            text-wrap: nowrap;
+            column-gap: 10px;
+        }
+
+        .announcement-taps {
+            display: flex;
+            column-gap: 2px;
+        }
+
+        .announcement-tap,
+        .announcement-active-tap {
+            height: 3px;
+            width: 16px;
+            border-radius: 50px;
+        }
+
+        .announcement-tap {
+            background-color: rgba(217, 217, 217, 0.20);
+        }
+
+        .announcement-active-tap {
+            background-color: rgba(var(--dark-blue), 1) !important;
+        }
+
+        .announcement-more-info {
+            width: 18%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            column-gap: 4px;
+            padding: 0px 10px;
+        }
+
+        .announcement-more {
+            font-style: italic;
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+            color: rgba(var(--dark-blue), 1);
+        }
+
+        .announcement-date-icon {
+            font-size: medium;
+            padding-right: 8px;
+            size: 15px;
+        }
+    </style>
+</head>
+
+<body class="dark-mode" style="position: relative;">
+    <button onclick="toggleDarkMode()" style="position: absolute; top:40px; left:40px;  z-index: 10;"><i
+            class="bi bi-moon-stars"></i> Dark Mode</button>
+    <div class="qaaba">
+        <div class="qaaba-img">
+            <img src="/custom/widgets/SSP/images/Al-Harram.gif">
+        </div>
+        <div class="qaaba-title">
+            <img class="logo" src="/custom/widgets/SSP/images/Alternative_Al-Haramain_Logo_Transparent.png">
+            <img class="logo-dark" src="/custom/widgets/SSP/images/Al-Haramain_Logo_Transparent.png">
+            <h4 dir="rtl" style="align-self: end;">نستوجب منا حمدا لله سبحانه وتعالى ما اكرم به بلادنا من خدمة الحرمين
+                الشريفين ورعاية الحجاج
+                والمعتمرين والزوار وحرصها الدائم على التطوير المستمر للمشاعر المقدسة والخدمات مبا يكفل اداء النسك
+                بكل
+                يسر وسهولة</h4>
+        </div>
+    </div>
+
+    <div class="divider">
+        <h2>الخدمات والبيانات</h2>
+    </div>
+    <div class="actions-and-data-wrapper">
+        <div class="actions-wrapper">
+            <div class="action" onclick="window.parent.location.href ='/Templates.do?module=serviceRequest'">
+                <div class="action-info">
+                    <h4>تسجيل طلب</h4>
+                    <p dir="rtl">تسجيل طلب جديد في خدمة service desk</p>
+                </div>
+                <i class="bi bi-file-earmark-plus"></i>
+            </div>
+            <div class="action" onclick="window.parent.location.href ='/ui/solutions?mode=list'">
+                <div class="action-info">
+                    <h4>الإستفسار عن معلومة</h4>
+                    <p>افحص الدليل لإيجاد خدمتك المرغوبة</p>
+                </div>
+                <i class="bi bi-question-circle"></i>
+            </div>
+            <div class="action" onclick="window.parent.location.href ='/Templates.do?module=incident'">
+                <div class="action-info">
+                    <h4>هل تواجه مشكلة ما؟</h4>
+                    <p>احجز جلستك الأن مع فريق الدعم الفني الخاص بنا</p>
+                </div>
+                <i class="bi bi-x-octagon"></i>
+            </div>
+        </div>
+
+
+        <div class="data-wrapper">
+            <div id="chartContainer" style="height: 350px; width: 80%;"></div>
+        </div>
+    </div>
+
+    <div class="divider">
+        <h2>الأصول والإعلانات</h2>
+    </div>
+
+
+    <div class="announcements-and-assets-wrapper">
+        <div class="announcements-wrapper">
+
+            <div style="position: relative; overflow: hidden;">
+                <!-- '/custom/widgets/SSP/images/(background\ pattern\).png' -->
+                <div
+                    style="width: 800px; height: 298px; display: block; background-color: rgb(var(--dark-blue));  background-image:url('/custom/widgets/SSP/images/Al-Haramain_Brand_Element_Transparent_Background_Pattern.png')">
+                </div>
+                <div class="announcement-info">
+                    <a style="text-decoration: none;" id="current-anncouncement-head" href="">
+                        <div class="announcement-info-header">
+                            <h4 id="current-anncouncement-title" class="announcement-info-header-title"></h4>
+                            <span id="current-anncouncement-subtitle" class="announcement-info-header-subtitle"></span>
+                        </div>
+                    </a>
+                    <div class="announcement-info-footer">
+                        <div class="announcement-date-info">
+                            <i class="bi bi-calendar2 announcement-date-icon"></i>
+                            <span id="current-anncouncement-date"></span>
+
+                            <i class="bi bi-globe-central-south-asia announcement-date-icon"></i>
+                            <span id="current-anncouncement-publicity"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="assets-wrapper">
+            <div id="assets-list" class="assets-list">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        
+        function toggleDarkMode() {
+            var element = document.body;
+            if (element.hasAttribute("theme")) {
+                element.removeAttribute("theme")
+            } else {
+                element.setAttribute("theme", "dark-mode");
+            }
+        };
+
+        jQuery(document).ready(function () {
+
+            window.parent.document.getElementsByClassName("widget-header")?.item(0)?.remove();
+
+            var metaData = [
+                { "filter_by": { "name": "All_Pending_Requester" }, "id": "PendingRequests" },
+                { "filter_by": { "name": "My_Pending_Request_Awaiting_approval" }, "id": "AwaitedRequests" },
+                { "filter_by": { "name": "Onhold_Requester" }, "id": "OnHoldRequests" },
+                { "filter_by": { "name": "Closed_Requester" }, "id": "ClosedRequests" }
+            ];
+
+            var requestChartData = [];
+
+            metaData.forEach(item => {
+
+                var inputObj = { "list_info": { "start_index": 1, "sort_field": "requester.name", "get_total_count": true } };
+
+                var data = inputObj.list_info.search_fields, inputData, count, html;
+
+                inputObj.list_info.filter_by = item.filter_by;
+
+                inputData = JSON.stringify(inputObj);
+
+                jQuery.ajax({
+                    url: '/api/v3/requests',
+                    async: false,
+                    type: 'GET',
+                    data: { "input_data": inputData },
+                    success: function (resp) {
+                        count = resp.list_info.total_count;
+
+                        var url = "/WOListView.do?&input_data=" + encodeURIComponent(inputData);
+                        requestChartData.push({ count: count, Title: item.id, url: url });
+                    },
+                    error: function (error) {
+                        requestChartData.push({ count: Math.random(), Title: item.id, url: "/WOListView.do?&input_data=" + encodeURIComponent(inputData) });
+                    }
+                });
+            });
+
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "dark2",
+                backgroundColor: "#22323d",
+
+                axisY: {
+                    title: "(إجمالي الأعداد)",
+                    fontFamily: "Segoe UI",
+                    titleFontColor: "#bb9661",
+                    gridColor: "#d0d8dd",
+                    interlacedColor: "#25343f",
+                    tickColor: "#d0d8dd",
+                    labelFontColor: "#bb9661"
+                },
+                axisX: {
+                    lineColor: "#d0d8dd",
+                    tickColor: "#d0d8dd",
+                    labelFontColor: "#bb9661",
+                    fontFamily: "Segoe UI"
+                },
+                legend: {
+                    fontColor: "#bb9661",
+                    fontFamily: "Segoe UI"
+                },
+                data: [{
+                    type: "column",
+                    color: "#bb9661",
+                    showInLegend: true,
+                    legendMarkerColor: "#bb9661",
+                    legendText: "عدد الطلبات بحالة الطلب",
+                    legendFontColor: "#bb9661",
+                    fontFamily: "Segoe UI",
+                    dataPoints: [
+                        { name: 'PendingRequests', y: getCount('PendingRequests'), label: "(Processing) يتم تنفيذه", click: goToLocation },
+                        { name: 'AwaitedRequests', y: getCount('AwaitedRequests'), label: "(Awaited) في الإنتظار", click: goToLocation },
+                        { name: 'OnHoldRequests', y: getCount('OnHoldRequests'), label: "(On hold) موقوف مؤقتاً", click: goToLocation },
+                        { name: 'ClosedRequests', y: getCount('ClosedRequests'), label: "(Completed) مكتمل", click: goToLocation },
+                    ]
+                }]
+            });
+
+            chart.render();
+
+            function getCount(requestType) {
+                return requestChartData?.find(r => r.Title == requestType)?.count ?? 0;
+            }
+
+            function goToLocation(elementData) {
+                window.parent.location.href = requestChartData?.find(r => r.Title == elementData.dataPoint.name)?.url;
+            }
+
+            ////////////////////////////assets////////////////////////////////
+
+            function fetchAssets() {
+                var user_id = parent?.sdp_user?.LOGGEDIN_USERID;
+
+                var assetsInputObj = {
+                    "list_info": {
+                        "row_count": 100,
+                        "start_index": 0,
+                        "sort_field": "id",
+                        "sort_order": "asc",
+                        "get_total_count": true,
+                    }
+                }
+
+                jQuery.ajax({
+                    url: '/api/v3/users/' + user_id + "/associated_assets",
+                    type: 'GET',
+                    data: { "input_data": JSON.stringify(assetsInputObj) },
+                    success: function (assetsResponse) {
+                        var assets = assetsResponse.associated_assets;
+                        if (assets.length > 0) {
+                            assets.forEach((element, index) => {
+                                jQuery("#assets-list").append(
+                                    "<div class='asset'>" +
+                                    "<img class='asset-icon' src='" + element.image_file_name + "'>" +
+                                    "<div class='asset-info'>" +
+                                    "<h4>" + element.asset.name + "</h4>" +
+                                    "<p style='opacity: 40%;' >" + element.product_type?.name + "</p>" +
+                                    "</div></div>");
+                            })
+                        } else {
+                            jQuery("#assets-list").append("<h5 style='align-self: center;justify-self: center;'>No Asset Available</h5>")
+                        }
+
+                    },
+                    error: function (error) {
+                        var x =
+                            [{
+                                image_file_name: 'Al-Haramain Logo.png',
+                                asset: { name: 'asset name 1' },
+                                product_type: { name: 'type name 1' }
+                            }, {
+                                image_file_name: 'Al-Haramain Logo.png',
+                                asset: { name: 'asset name 2' },
+                                product_type: { name: 'type name 2' }
+                            }, {
+                                image_file_name: 'Al-Haramain Logo.png',
+                                asset: { name: 'asset name 3' },
+                                product_type: { name: 'type name 3' }
+                            }, {
+                                image_file_name: 'Al-Haramain Logo.png',
+                                asset: { name: 'asset name 4' },
+                                product_type: { name: 'type name 5' }
+                            }, {
+                                image_file_name: 'Al-Haramain Logo.png',
+                                asset: { name: 'asset name 6' },
+                                product_type: { name: 'type name 6' }
+                            }, {
+                                image_file_name: 'Al-Haramain Logo.png',
+                                asset: { name: 'asset name 7' },
+                                product_type: { name: 'type name 7' }
+                            }];
+
+                        x.forEach((element, index) => {
+                            jQuery("#assets-list").append(
+                                "<div class='asset'>" +
+                                "<img class='asset-icon' src='" + element.image_file_name + "'>" +
+                                "<div class='asset-info'>" +
+                                "<h4>" + element.asset.name + "</h4>" +
+                                "<p>" + element.product_type?.name + "</p>" +
+                                "</div></div>");
+                        })
+                    }
+                })
+            }
+
+            fetchAssets();
+
+            //////////////////////// announcements /////////////////////////////////////////
+
+            var announcementsInputObj = { "list_info": { "row_count": "10", "get_total_count": "true", "sort_field": "id", "sort_order": "asc" } };
+
+            var currentIndex = 0;
+
+            var announcements;
+
+            function updateAnnouncement() {
+                if (announcements && announcements.length > 0) {
+                    var currentAnnouncement = announcements[currentIndex];
+
+                    jQuery("#current-anncouncement-title").fadeOut(300, function () {
+                        jQuery(this).html('<a id="current-anncouncement-head" href="" onclick="window.parent.$announcements.viewAnnouncement(\'' + currentAnnouncement.id.trim() + '\')"><div class="announcement-info-header"><h4 id="current-anncouncement-title" class="announcement-info-header-title">' + currentAnnouncement.title + '</h4><span id="current-anncouncement-subtitle" class="announcement-info-header-subtitle"></span></div></a>' ?? "Templates for Field and Form Rules").fadeIn(300);
+                    });
+
+                    jQuery("#current-anncouncement-subtitle").fadeOut(300, function () {
+                        jQuery(this).html((currentAnnouncement?.content?.length < 100 ? currentAnnouncement?.content : currentAnnouncement?.announcement_type?.description) ?? "With filed and form rules, the administrator can decide on the fields to be...").fadeIn(300);
+                    });
+
+                    jQuery("#current-anncouncement-date").fadeOut(300, function () {
+                        jQuery(this).html(currentAnnouncement?.from_date?.display_value).fadeIn(300);
+                    });
+
+                    jQuery("#current-anncouncement-publicity").fadeOut(300, function () {
+                        jQuery(this).html(currentAnnouncement?.is_public ? "Public" : "Private").fadeIn(300);
+                    });
+
+
+                    jQuery(".announcement-tap").removeClass("announcement-active-tap");
+                    jQuery(".announcement-tap").eq(currentIndex).addClass("announcement-active-tap");
+
+
+                    currentIndex = (currentIndex + 1) % announcements.length;
+                }
+            }
+
+            function fetchAnnouncements() {
+                var announcementsInputObj = { "list_info": { "filter_by": { "name": "currently_showing" }, "row_count": 10, "get_total_count": "true", "sort_field": "from_date", "sort_order": "desc" } };
+
+                jQuery.ajax({
+                    url: '/api/v3/announcements',
+                    type: 'GET',
+                    data: { "input_data": JSON.stringify(announcementsInputObj) },
+                    success: function (response) {
+                        announcements = response?.announcements;
+                        updateAnnouncement();
+
+                        announcements?.forEach((element, index) => {
+                            jQuery(".announcement-taps").append("<div id='announcement-" + index + "' class='announcement-tap'></div>");
+                        });
+
+                        if (announcements?.length === 0) {
+                            jQuery("#current-anncouncement-title").html("There are no new announcements today");
+                            jQuery("#current-anncouncement-subtitle").html("N/A");
+                            jQuery("#current-anncouncement-date").html("N/A");
+                            jQuery("#current-anncouncement-publicity").html("N/A");
+                        }
+
+                    },
+                    error: function (error) {
+                        console.error("Error fetching announcements:", error);
+                        jQuery("#current-anncouncement-title").html("Error Fetching Announcements");
+                        jQuery("#current-anncouncement-subtitle").html("Please try again later.");
+                        jQuery("#current-anncouncement-date").html("N/A");
+                        jQuery("#current-anncouncement-publicity").html("N/A");
+                    }
+                });
+            }
+
+            fetchAnnouncements();
+
+            setInterval(updateAnnouncement, 5000);
+
+            var currentAnncouncementHead = document.getElementById("current-anncouncement-head");
+
+            currentAnncouncementHead.addEventListener("click", function () { window.parent.$announcements.viewAnnouncement(announcements[currentIndex].id) })
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</body>
+
+</html>
