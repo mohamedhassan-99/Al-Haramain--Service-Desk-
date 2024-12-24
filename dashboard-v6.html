@@ -380,6 +380,164 @@
             }
         }
 
+        .action {
+            min-width: 20%;
+            max-width: 20%;
+            min-height: 300px;
+            overflow: hidden;
+            border: 2px solid rgb(var(--light-brown));
+            border-radius: 5%;
+            box-shadow: 1px 1px 4px rgb(var(--light-brown));
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            color: rgb(var(--light-brown));
+            background-color: rgba(var(--light-brown), 10%);
+            padding: 20px;
+            text-align: center;
+            text-wrap: balance;
+            cursor: pointer;
+
+            &,
+            h4,
+            p,
+            i {
+                margin: 0;
+                transition: all 0.3s ease-in-out;
+            }
+
+            p {
+                opacity: 0;
+                width: 200px;
+                height: 50px;
+                overflow: hidden;
+            }
+
+            h4 {
+                translate: 0 100%;
+            }
+
+            i {
+                translate: 0 30%;
+                scale: 200%;
+                background-size: cover;
+                background-position: center;
+                color: rgb(var(--light-brown));
+                font-size: xx-large;
+                align-content: center;
+                padding: 15px;
+                border-radius: 5%;
+            }
+
+            &:hover {
+                transform: translateY(-2%) scale(105%);
+                box-shadow: 0px 0px 10px rgb(var(--light-brown));
+                background-color: rgb(var(--light-brown));
+                border-color: rgb(var(--dark-blue));
+
+                p {
+                    opacity: 1;
+                }
+
+                p,
+                h4,
+                i {
+                    color: rgb(var(--dark-blue));
+                }
+
+                h4 {
+                    translate: 0 0;
+                }
+
+                i {
+                    translate: 0 0;
+                    scale: 100%;
+                    background-color: rgb(var(--dark-blue), 10%);
+                }
+            }
+        }
+
+        .action {
+            min-width: 20%;
+            max-width: 20%;
+            min-height: 300px;
+            overflow: hidden;
+            border: 2px solid rgb(var(--light-brown));
+            border-radius: 5%;
+            box-shadow: 1px 1px 4px rgb(var(--light-brown));
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            color: rgb(var(--light-brown));
+            background-color: rgba(var(--light-brown), 10%);
+            padding: 20px;
+            text-align: center;
+            text-wrap: balance;
+            cursor: pointer;
+
+            &,
+            h4,
+            p,
+            i {
+                margin: 0;
+                transition: all 0.3s ease-in-out;
+            }
+
+            p {
+                opacity: 0;
+                width: 200px;
+                height: 50px;
+                overflow: hidden;
+            }
+
+            h4 {
+                translate: 0 100%;
+            }
+
+            i {
+                translate: 0 30%;
+                scale: 200%;
+                background-size: cover;
+                background-position: center;
+                color: rgb(var(--light-brown));
+                font-size: xx-large;
+                align-content: center;
+                padding: 15px;
+                border-radius: 5%;
+            }
+
+            &:hover {
+                transform: translateY(-2%) scale(105%);
+                box-shadow: 0px 0px 10px rgb(var(--light-brown));
+                background-color: rgb(var(--light-brown));
+                border-color: rgb(var(--dark-blue));
+
+                p {
+                    opacity: 1;
+                }
+
+                p,
+                h4,
+                i {
+                    color: rgb(var(--dark-blue));
+                }
+
+                h4 {
+                    translate: 0 0;
+                }
+
+                i {
+                    translate: 0 0;
+                    scale: 100%;
+                    background-color: rgb(var(--dark-blue), 10%);
+                }
+            }
+        }
+
         .announcements-and-assets-wrapper {
             width: 80%;
             height: 370px;
@@ -392,7 +550,8 @@
 
         .announcements-wrapper {
             min-height: 300px;
-            min-width: 70%;
+            min-width: 40%;
+            max-width: 40%;
             box-shadow: 1px 1px 6px rgb(var(--light-brown));
             border-radius: 10px;
             border: 2px rgb(var(--light-brown)) solid;
@@ -401,7 +560,8 @@
         }
 
         .assets-wrapper {
-            width: 30%;
+            max-width: 20%;
+            min-width: 20%;
             height: 300px;
             display: flex;
             text-align: start;
@@ -703,8 +863,23 @@
     </div>
 
     <div class="announcements-and-assets-wrapper">
+        <div class="action"
+            onclick="window.parent.location.href ='https:\/\/eservice.gph.gov.sa/out/3b18a7d3-4d0a-4ef9-98e0-61ad9b8c4d16.pdf'">
+            <i class="bi bi-question-circle"></i>
+            <div class="action-info">
+                <h4>دليل المستخدم</h4>
+                <p dir="rtl">لمعرفة المعلومات اللازمة عن إستخدم النظام</p>
+            </div>
+        </div>
+        <div class="action"
+            onclick="window.parent.location.href ='https\:\/\/itunes.apple.com/us/app/servicedesk-plus-it-help-desk/id460035266?mt=8'">
+            <i class="bi bi-phone"></i>
+            <div class="action-info">
+                <h4>المتجر</h4>
+                <p>لتحميل التطبيقات الخاصة بنا</p>
+            </div>
+        </div>
         <div class="announcements-wrapper">
-
             <div class="announcements-back">
                 <div class="announcements-background">
                 </div>

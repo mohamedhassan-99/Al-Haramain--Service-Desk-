@@ -127,19 +127,19 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 90%;
+                width: 95%;
 
                 &>.bg {
                     position: absolute;
                     width: 200%;
-                    height: 400%;
+                    height: 800%;
                     background-image: url(/custom/widgets/SSP/images/Al-Haramain_Brand_Element_Transparent_Background_Pattern.png);
                     animation: rotate 120s ease-in-out 0s infinite alternate;
                 }
 
                 &>.qaaba-img {
                     justify-self: center;
-                    width: 95%;
+                    width: 90%;
                     height: 350px;
                     z-index: 1;
                     background-color: black;
@@ -186,32 +186,42 @@
         }
 
         .divider {
+            position: relative;
             display: flex;
             justify-content: flex-end;
             padding: 0 40px;
             align-items: center;
+
+            min-height: 110px;
+            min-width: 100%;
+
+            h2 {
+                padding: 0 2% 5px 0;
+                color: rgb(var(--light-brown));
+                filter: drop-shadow(0px 0px 1px rgba(var(--dark-blue), 0.7));
+                text-shadow: 2px 2px 2px rgb(var(--dark-blue));
+
+                [theme="dark-mode"] & {
+                    filter: drop-shadow(2px 4px 6px rgba(var(--dark-blue)));
+                    text-shadow: none;
+                }
+            }
+
+        }
+
+        .divider-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: repeat-x;
             background-image: url(/custom/widgets/SSP/images/Al-Haramain_White_Brand_Element_Large_Bar_With_Borders.png);
 
             [theme="dark-mode"] & {
                 background-image: url(/custom/widgets/SSP/images/Al-Haramain_Brand_Element_Large_Bar_With_Borders.png);
             }
 
-            background-size: contain;
-            background-repeat: repeat-x;
-            min-height: 110px;
-            min-width: 100%;
             mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 2%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 98%);
-
-            h2 {
-                color: rgb(var(--light-brown));
-                filter: drop-shadow(0px 0px 1px rgba(var(--dark-blue), 0.7));
-                text-shadow: 2px 2px 2px rgb(var(--dark-blue));
-
-                [theme="dark-mode"] & {
-                    filter: drop-shadow(0px 0px 5px var(--dark-blue));
-                    text-shadow: 0px 0px 3px rgb(var(--light-brown));
-                }
-            }
 
             @media (width <=1280px) {
                 background-size: cover;
@@ -235,11 +245,11 @@
             flex-grow: 1;
             flex-shrink: 1;
             flex-direction: row;
-            gap: 20px;
             justify-content: start;
             align-items: start;
             animation: slide-in 2s cubic-bezier(0.42, 0, 0.84, 1.17) forwards;
         }
+
 
         @keyframes slide-in {
             0% {
@@ -253,27 +263,30 @@
         }
 
         #service-catalogs {
+            position: sticky;
+            top: 0;
             scrollbar-color: red !important;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             gap: 15px;
-            padding: 10px;
+            padding: 10px 10px 10px 0px;
             justify-content: center;
             align-items: start;
             min-height: 10vh;
-            max-width: 14vw;
+            max-width: 19vw;
+            min-width: 19vw;
 
             .catalog-head {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                padding: 10px;
-                max-width: 200px;
-                min-width: 200px;
+                padding: 5px;
+                max-width: 8vw;
+                min-width: 8vw;
                 text-align: center;
-                text-wrap: nowrap;
+                text-wrap: wrap;
                 border-radius: 10px;
                 border: 1px solid transparent;
                 transform: translateY(5%);
@@ -284,13 +297,14 @@
                 }
 
                 img {
-                    width: 40px;
+                    width: 50px;
                     object-fit: contain;
                     filter: grayscale();
                 }
 
                 h6 {
                     color: rgb(var(--light-brown));
+                    font-size: small;
                 }
 
                 &.is-selected,
@@ -318,7 +332,8 @@
             border-right: none;
 
             display: flex;
-            width: 84vw;
+            max-width: 90%;
+            min-width: 90%;
             justify-content: start;
             align-items: center;
             padding: 20px;
@@ -346,13 +361,15 @@
         }
 
         #selected-catalog {
+            position: relative;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             gap: 20px;
-            max-width: 84vw;
-            padding: 20px;
+            max-width: 80vw;
+            min-width: 80vw;
+            padding: 10px 0 10px 10px;
 
             a {
                 display: contents;
@@ -362,23 +379,23 @@
             .service,
             .service.incident {
                 position: relative;
-                max-width: 400px;
-                min-width: 400px;
-                max-height: 160px;
-                min-height: 160px;
+                max-width: 360px;
+                min-width: 360px;
+                max-height: 130px;
+                min-height: 130px;
                 border-radius: 10px;
-                padding: 20px;
+                padding: 15px;
                 overflow: visible;
                 display: flex;
                 flex-direction: column;
                 justify-content: start;
                 transform: translateY(5%) scale(100%);
-                gap: 10px;
+                gap: 5px;
 
                 .service-start {
                     position: absolute;
                     bottom: 15px;
-                    left: 25px;
+                    left: 20px;
                     font-size: x-large;
                 }
 
@@ -388,9 +405,9 @@
                     gap: 10px;
 
                     img {
-                        max-width: 50px;
-                        min-width: 50px;
-                        min-height: 50px;
+                        max-width: 45px;
+                        min-width: 45px;
+                        min-height: 45px;
                         object-fit: contain;
                         border-radius: 5px;
                     }
@@ -398,6 +415,7 @@
                     h5 {
                         text-wrap: pretty;
                         font-size: large;
+                        margin-bottom: 4px;
                     }
                 }
 
@@ -411,7 +429,7 @@
 
                 .service-info {
                     p {
-                        font-size: smaller;
+                        font-size: small;
                         margin: 0;
                         max-width: 90%;
                     }
@@ -551,7 +569,8 @@
         }
 
         .announcements-and-assets-wrapper {
-            width: 80%;
+            max-width: 85%;
+            min-width: 85%;
             height: 370px;
             padding-bottom: 30px;
             display: flex;
@@ -560,9 +579,90 @@
             gap: 20px;
         }
 
+        
+        .action {
+            min-width: 20%;
+            max-width: 20%;
+            min-height: 300px;
+            overflow: hidden;
+            border: 2px solid rgb(var(--light-brown));
+            border-radius: 10px;
+            box-shadow: 1px 1px 4px rgb(var(--light-brown));
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            color: rgb(var(--light-brown));
+            background-color: rgba(var(--light-brown), 10%);
+            padding: 20px;
+            text-align: center;
+            text-wrap: balance;
+            cursor: pointer;
+
+            &,
+            h4,
+            p,
+            i {
+                margin: 0;
+                transition: all 0.3s ease-in-out;
+            }
+
+            p {
+                opacity: 0;
+                width: 200px;
+                height: 50px;
+                overflow: hidden;
+            }
+
+            h4 {
+                translate: 0 100%;
+            }
+
+            i {
+                translate: 0 30%;
+                scale: 200%;
+                background-size: cover;
+                background-position: center;
+                color: rgb(var(--light-brown));
+                font-size: xx-large;
+                align-content: center;
+                padding: 15px;
+                border-radius: 5%;
+            }
+
+            &:hover {
+                transform: translateY(-2%) scale(105%);
+                box-shadow: 0px 0px 10px rgb(var(--light-brown));
+                background-color: rgb(var(--light-brown));
+                border-color: rgb(var(--dark-blue));
+
+                p {
+                    opacity: 1;
+                }
+
+                p,
+                h4,
+                i {
+                    color: rgb(var(--dark-blue));
+                }
+
+                h4 {
+                    translate: 0 0;
+                }
+
+                i {
+                    translate: 0 0;
+                    scale: 100%;
+                    background-color: rgb(var(--dark-blue), 10%);
+                }
+            }
+        }
+
         .announcements-wrapper {
             min-height: 300px;
-            min-width: 70%;
+            min-width: 40%;
+            max-width: 40%;
             box-shadow: 1px 1px 6px rgb(var(--light-brown));
             border-radius: 10px;
             border: 2px rgb(var(--light-brown)) solid;
@@ -571,7 +671,8 @@
         }
 
         .assets-wrapper {
-            width: 30%;
+            max-width: 20%;
+            min-width: 20%;
             height: 300px;
             display: flex;
             text-align: start;
@@ -860,15 +961,19 @@
     </div>
 
     <div class="divider">
+        <div class="divider-bg"></div>
         <h2>الأقسام والخدمات</h2>
     </div>
 
     <div dir="rtl" class="actions-wrapper">
-        <div id="service-catalogs"></div>
+        <div id="service-catalogs">
+            <h4 id="service-type">الأقسام</h4>
+        </div>
         <div id="selected-catalog"></div>
     </div>
 
     <div class="divider">
+        <div class="divider-bg"></div>
         <h2>الإحصائات</h2>
     </div>
 
@@ -878,12 +983,28 @@
     </div>
 
     <div class="divider">
+        <div class="divider-bg"></div>
         <h2>الأصول والإعلانات</h2>
     </div>
 
     <div class="announcements-and-assets-wrapper">
+        <div class="action"
+            onclick="window.parent.location.href ='https:\/\/eservice.gph.gov.sa/out/3b18a7d3-4d0a-4ef9-98e0-61ad9b8c4d16.pdf'">
+            <i class="bi bi-question-circle"></i>
+            <div class="action-info">
+                <h4>دليل المستخدم</h4>
+                <p dir="rtl">لمعرفة المعلومات اللازمة عن إستخدم النظام</p>
+            </div>
+        </div>
+        <div class="action"
+            onclick="window.parent.location.href ='https\:\/\/itunes.apple.com/us/app/servicedesk-plus-it-help-desk/id460035266?mt=8'">
+            <i class="bi bi-phone"></i>
+            <div class="action-info">
+                <h4>المتجر</h4>
+                <p>لتحميل التطبيقات الخاصة بنا</p>
+            </div>
+        </div>
         <div class="announcements-wrapper">
-
             <div class="announcements-back">
                 <div class="announcements-background">
                 </div>
@@ -1083,11 +1204,6 @@
             var servicesTemplates = selected.templates.filter(temp => temp.is_service_template === true);
             var incidentsTemplates = selected.templates.filter(temp => temp.is_service_template === false);
 
-            console.log("service and incedints:", {
-                services: servicesTemplates,
-                incident: incidentsTemplates
-            });
-
             var services = "";
 
             if (servicesTemplates.length > 0) {
@@ -1111,7 +1227,7 @@
             }
 
             if (incidentsTemplates.length > 0) {
-                services += "<h4 id='service-type' class='incident'>المشكلات</h4>\n";
+                services += "<h4 id='service-type' class='incident'>البلاغات</h4>\n";
 
                 incidentsTemplates.forEach(template => {
                     services +=
@@ -1131,9 +1247,17 @@
             }
 
 
-            $(selectedCatalog).fadeOut(300, function () {
-                $(this).html(services).fadeIn(300);
-            });
+            $(selectedCatalog)
+                .animate({
+                    left: '-100%',
+                    opacity: 0
+                }, 300, function () {
+                    $(this).html(services);
+                })
+                .animate({
+                    left: '0',
+                    opacity: 1
+                }, 300);
         }
 
         const addCatalog = (element, index) => {
