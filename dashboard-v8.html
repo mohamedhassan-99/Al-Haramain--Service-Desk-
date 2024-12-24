@@ -579,7 +579,7 @@
             gap: 20px;
         }
 
-        
+
         .action {
             min-width: 20%;
             max-width: 20%;
@@ -2045,6 +2045,7 @@
                 },
                 complete: function () {
                     serviceCatalogs.forEach(addCatalog);
+                    $(".catalog-head")[0]?.click();
                 }
             });
         }
@@ -2180,6 +2181,7 @@
             currentAnncouncementHead.addEventListener("click", function () { window.parent.$announcements.viewAnnouncement(announcements[currentIndex].id) })
 
             fetchServiceCatalog();
+
 
             setTimeout(() => {
                 let isDarkMode = document.body.hasAttribute("theme");
