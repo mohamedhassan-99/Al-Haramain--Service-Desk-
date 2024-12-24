@@ -1,0 +1,696 @@
+/*Roboto font call$*/
+@font-face {
+	font-family: 'Roboto';
+    src: url('/fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('/fonts/Roboto-Regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Roboto';
+    src: url('/fonts/Roboto-Bold-webfont.woff') format('woff'),
+         url('/fonts/Roboto-Bold-webfont.ttf') format('truetype');
+	font-weight: bold;
+    font-style: normal;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: 'Roboto';
+    font-size: 13px;
+}
+html, body, table tr td, table tbody tr td a, p {
+    color: #000;
+}
+#body, body {
+	margin: 0;
+	display: table;
+	width: 100%;
+	position: relative;
+}
+html, body, #main {
+    height: 100%;
+}
+/*Header start*/
+.navbar-nav {
+    margin: 8px -15px;
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.top-header *, .top-subheader * {
+    box-sizing: border-box;
+}
+.navbar-brand {
+    float: left;
+    padding: 16px 15px;
+    font-size: 17px;
+    line-height: 18px;
+    height: 50px;
+}
+.top-header .navbar-brand {
+    height: 38px;
+    padding: 1px 5px;
+    cursor: default;
+}
+.top-header .navbar-brand > img, .ssp-header img {
+    width: 155px;
+    height: 38px;
+}
+.nav > li {
+    position: relative;
+    display: block;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 6px 15px;
+}
+.top-header .navbar-nav {
+	margin-top: 0px;
+    margin-bottom: 0px;
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+.top-header .navbar-nav > li > a.navbar-thumb {
+    padding: 2px 6px;
+}
+.top-header .navbar-collapse.collapse > ul:last-child {
+	width: 120px;
+}
+.top-header .navbar-nav > li {
+	display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+.top-header .navbar-nav > li > a {
+    line-height: 18px;
+}
+.prp-circle {
+    border: 1px solid transparent;
+    border-radius: 50px;
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+}
+.prp-circle img, .prp-circle-lx img {
+    width: 100%;
+    height: 100%;
+}
+.navbar-nav {
+	float: left;
+    margin: 0;
+}
+.top-header .navbar-collapse.collapse {
+	width: 100%;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    display: table;
+}
+.top-header .container-fluid {
+	margin: 0;
+}
+.top-header .navbar {
+	background-color: #484848;
+	min-height: 38px;
+}
+.esmportalbtn {
+	background-image: none;
+	background-color: #428BCA;
+	border-radius: 15px;
+	border: 1px solid #357EBD;
+	cursor: pointer;
+	color: #FFF;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1.5;
+	padding: 2px 15px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.portal-container {
+    background-color: #4B4B4B;
+    color: #FFF;
+}
+/*Widget start*/
+.portal-widget {
+    margin: 0 auto;
+    width: 1200px;
+}
+.portal-widget h2 {
+	color: #515151;
+}
+.portal-widget .widget-panel {
+	background-color: #FFF;
+	border: 1px solid #DDD;
+}
+.portal-widget .widget-panel .h4 {
+	color: #333;
+}
+.portal-widget .widget-panel p {
+	color: #6A6A6A;
+}
+.col-xs-4 {
+	width: 33.33333333%;
+}
+.portal-header {
+    background-color: #4B4B4B;
+    min-width: 1200px;
+    width: 100%;
+}
+.portal-header div {
+    color: #FFF;
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: center;
+    line-height: 1.3;
+    font-weight: 300;
+    font-size: 33px;
+}
+.esm-footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align:center;
+    height:30px;
+    background-color: rgb(255, 255, 255, 0.1);
+    padding-top: 10px;
+	color: #777;
+}
+/*Container end*/
+/*Widget start*/
+.portal-widget h2 {
+	margin: 0 0 30px 0;
+	font-size: 20px;
+	font-weight: normal;
+}
+.portal-widget .widget-panel {
+    /*height: 100%;*/
+    height: auto;
+    padding: 15px;
+    overflow: hidden;
+	width: 100%;
+	display: table;
+	box-shadow: 1px 1px 3px rgba(70, 70, 70, 0.4);
+    border-radius: 5px;
+}
+.portal-widget .widget-panel:hover {
+	box-shadow: 0 0 19px rgba(70, 70, 70, 0.4);
+}
+.portal-widget .disp-c {
+    display: table-cell;
+	vertical-align: top;
+}
+.portal-widget .row {
+	margin: 0;
+}
+.portal-widget .col-xs-4 {
+	margin-bottom: 25px;
+}
+.portal-widget .widget-panel:hover .h4 {
+	color: #008ddd;
+	color: var(--link_tab_line_color, #008ddd);
+}
+.portal-widget .widget-panel .h4 {
+	margin: 3px 0;
+	font-family: 'Roboto';
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.1;
+	cursor: pointer;
+	text-decoration: none;
+}
+.portal-widget .widget-panel p {
+	margin: 0;
+}
+.portal-widget .widget-panel .espr {
+    border-radius: 5px;
+}
+.portal-widget .logo-img {
+	width: 40px;
+}
+.esmlogo-img {
+	border-radius: 5px;
+    height: 64px;
+	width: 64px;
+	vertical-align: sub;
+}
+
+.truncate-ellipsis2 {
+    overflow: hidden;
+    position: relative;
+    max-height: 36px;
+    padding-right: 15px;
+}
+.truncate-ellipsis2:before {
+	background-image: url('images/ui-common-view.svg?14900');
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: sub;
+	background-position: -336px -72px;
+	width: 16px;
+	height: 16px;
+	content: "";
+	right: 0;
+	top: 20px;
+	position: absolute;
+}
+.truncate-ellipsis2:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	margin-top: 1px;
+	background: white;
+}
+.truncate-ellipsis {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+}
+.truncate-ellipsis .truncate-wrapper {
+    display: table-cell;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.row:before {
+	content: " ";
+    display: table;
+}
+.row:after {
+	clear: both;
+	content: " ";
+    display: table;
+}
+.justify-content-around {
+	-ms-flex-pack: distribute!important;
+    justify-content: space-around!important;
+}
+.justify-content-around.row {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.col-xs-4 {
+	position: relative;
+    min-height: 1px;
+    padding-left: 25px;
+    padding-right: 25px;
+	float: left;
+}
+.pl20 {
+	padding-left: 20px;
+}
+.pr20 {
+	padding-right: 20px;
+}
+.pt40 {
+    padding-top: 40px;
+}
+/*Widget end*/
+
+/*Search input stars*/
+.search-box{
+    width:40%;
+    margin: 0 auto;
+}
+.search-box input {
+    padding: 0px 20px;
+}
+.search-box > span:first-child {
+    position: absolute;
+    top: 41px;
+    left: 9px !important;
+    color: #999999;
+}
+.portal-search {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+}
+/*Search input ends*/
+/*Custom Scrollbar css*/
+html:not(.mac-os) :hover::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    transition: background-color 15s ease-in-out;
+    background-color: #b3b3b3;
+}
+
+html:not(.mac-os) :hover::-webkit-scrollbar-thumb:hover {
+    transition: background-color 15s ease-in-out;
+    background-color: #b3b3b3;
+}
+
+html:not(.mac-os) body[theme=dark-mode] :hover::-webkit-scrollbar-thumb {
+    transition: background-color 15s ease-in-out;
+    background-color: #909092;
+}
+
+html:not(.mac-os) body[theme=dark-mode] :hover::-webkit-scrollbar-thumb:hover {
+    transition: background-color 15s ease-in-out;
+    background-color: #909092;
+}
+
+html:not(.mac-os) ::-webkit-scrollbar {
+    display: inherit;
+    width: 9px;
+    height: 9px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #535353 !important;;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #919191;
+    border-radius: 10px;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar {
+    background-color: #909092;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+    background-color: #b3b3b3;
+}
+
+@-moz-document url-prefix() {
+    html:not(.mac-os) {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+    }
+
+    html:not(.mac-os) * {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+    }
+
+    html:not(.mac-os) *:hover {
+        scrollbar-color: #b3b3b3 transparent;
+    }
+
+    html:not(.mac-os):hover {
+        scrollbar-color: #b3b3b3 transparent;
+    }
+
+    html:not(.mac-os)[theme=darkmode] {
+        scrollbar-color: transparent transparent;
+    }
+
+    html:not(.mac-os)[theme=darkmode] * {
+        scrollbar-color: transparent transparent;
+    }
+
+    html:not(.mac-os)[theme=darkmode] *:hover {
+        scrollbar-color: #909092 transparent;
+    }
+
+    html:not(.mac-os)[theme=darkmode]:hover {
+        scrollbar-color: #909092 transparent;
+    }
+
+    .CodeMirror-vscrollbar {
+        scrollbar-color: #909092 #ffffff !important;
+    }
+}
+
+/*ESM Portal New UI*/
+.esmportal-newui {
+    margin: 0 auto;
+    max-width: 3840px;
+}
+.esmportal-newui .esmportal-header {
+    background: linear-gradient(to bottom, rgb(181, 220, 220), white);
+    width: 100%;
+    margin: 0 auto
+}
+.esmportal-newui .esmportal-header .esmportal-subheader {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+.esmportal-newui .esmportal-header .esmportal-subheader .esm-title {
+    width: 60%;
+    text-align: left;
+    font: normal normal 600 32px / 50px zoho puvi;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    padding-right: 60px;
+    box-sizing: border-box;
+}
+.esmportal-newui .esmportal-header .esmportal-subheader .search-box {
+    margin: 0;
+    width: 100%;
+    padding: 0 !important;
+    position: relative;
+}
+.esmportal-newui .esmportal-header .esmportal-subheader .search-box input {
+    border-radius: 100px;
+    border: 1px solid #B5D1D1;
+    width: 100%;
+    height: 42px;
+    border-radius: 50px;
+    padding-left: 47px !important;
+    background: #fff;
+}
+.esmportal-newui .esmportal-header .esmportal-subheader .search-box .search {
+    background: url(/custom/esm/esm-search.png?14900) no-repeat;
+    width: 36px;
+    height: 36px;
+    background-size: contain;
+    left: 4px !important;
+    right: auto;
+    top: 1px;
+    opacity: 1;
+}
+.esmportal-newui .esmportal-header .esmportal-subheader .esm-banner {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 350px;
+}
+.esmportal-newui .esmportal-header .esmportal-subheader .esm-banner .esm-bannerimg {
+        width: 100%;
+    height: auto;
+    max-width: 350px;
+}
+.esmportal-newui .esmportal-instance {
+    background: linear-gradient(to bottom, white, rgb(181, 220, 220));
+    position: relative;
+    min-height: 50vh
+}
+.esmportal-newui .esmportal-instance h2 {
+    font: normal normal 22px / 32px Zoho Puvi;
+    color: rgb(36, 46, 53);
+    text-transform: capitalize;
+    margin: 0;
+    padding: 30px 0px;
+    width: 100%;
+}
+
+.esmportal-instance .esmportal-cards {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1100px;
+    flex-wrap: wrap;
+    padding: 0 30px;
+}
+
+.esmportal-newui .esm-footer {
+    padding-top: 10px;
+    background: #b5dcdc;
+    position: static;
+    color: #000;
+}
+
+.esmportal-newui .esmportal-instance .esmportal-cards .instance-layout{
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: start;
+}
+.esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel * {
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+.esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel{
+    margin: 20px;
+    width: 185px;
+    min-height: 180px;
+    padding: 0;
+    position: relative;
+    margin: 20px 40px 20px 0;
+    border-radius: 15px;
+    transition: all 0.3s;
+    border: 1px solid #f5f5f5;
+    background: #fff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 1px 1px 3px rgba(70, 70, 70, 0.4);
+    cursor: pointer;
+}
+
+.esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel .cspr.home1,
+.esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel .cspr.home2{
+    right: 10px !important;
+    top: 10px !important;
+}
+.esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel .cspr.home2{
+    opacity: 0;
+    transition: 200ms opacity ease-in-out
+}
+.esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel:hover .cspr.home2{
+    opacity: 1;
+}
+.esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel .inst-logo {
+    width: 100%;
+    margin: 0 auto;
+    height: 70px;
+}
+
+.esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel span.inst-title {
+    color: #000;
+    font: normal normal 500 15px Zoho Puvi;
+    margin: 5px 0px 10px 0px;
+    display: inline-block;
+    white-space: nowrap;
+    width: 95%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel p.inst-description {
+    color: #6A6A6A;
+    text-align: center;
+    font: normal normal 300 13px Zoho Puvi;
+    color: rgb(69, 82, 92);
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel:hover {
+    box-shadow: 2px 2px 4px 0px rgba(70, 70, 70, 0.4);
+    transform: scale(1.1);
+}
+
+/* Header Style */
+#topheader-fixed {
+    max-width: 3840px;
+    margin: 0 auto;
+    background: #498c8c;
+}
+.top-header {
+    height: 50px;
+    max-width: 1960px;
+    margin: 0 auto;
+}
+.top-header .navbar-brand img {
+    width: auto !important
+}
+.top-header .top-container {
+    background: #498c8c;
+    padding: 0px 10px;
+}
+.top-header button.esmportalbtn {
+    background: var(--tab_hover_color, #575757);
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin-top: -3px;
+}
+.top-container ul.header-icon-list > li:hover > a span svg{
+  stroke: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+body{
+    background: #b5dcdc;
+}
+/* Header Style */
+
+/*ESM Darkmode*/
+[theme=dark-mode] #top-header,
+[theme=dark-mode] #topheader-fixed,
+[theme=dark-mode] .top-header .top-container{
+    background: #375061;
+}
+[theme=dark-mode] .top-header button.esmportalbtn {
+    background: #498c8c;
+}
+.top-header button.esmportalbtn:hover {
+    background: #529292;
+}
+body[theme="dark-mode"],
+[theme=dark-mode] .content-panel{
+    background: linear-gradient(to bottom, #4CA1AF 0%, #2C3E50 70%) !important;
+}
+[theme=dark-mode] .esmportal-newui .esmportal-header {
+    background: linear-gradient(to top, #4CA1AF 0%, #2C3E50 100%);
+}
+[theme=dark-mode] .esmportal-newui .esmportal-instance {
+    background: linear-gradient(to bottom, #4CA1AF 0%, #2C3E50 100%);
+}
+[theme=dark-mode] .esmportal-newui .esm-footer{
+    background: #2C3E50;  
+}
+[theme=dark-mode] .esmportal-newui .esmportal-header .esmportal-subheader .esm-title{
+    color: #70c9d9;   
+}
+[theme=dark-mode] .esmportal-newui .esmportal-instance h2,
+[theme=dark-mode] .esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel span.inst-title,
+[theme=dark-mode] .esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel p.inst-description,
+[theme=dark-mode] .esmportal-newui .esm-footer {
+    color: #e2e2e2;
+}
+[theme=dark-mode] .esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel{
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+[theme=dark-mode] .esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel:hover{
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+[theme=dark-mode] .esmportal-newui .esmportal-instance .esmportal-cards .instance-layout .instance-panel .cspr.home2{
+    filter: brightness(0.5);
+}
+[theme=dark-mode] .esmportal-newui .esmportal-header .esmportal-subheader .search-box input{
+    border: 1px solid #2c4052;
+    background-color: #2d4153;
+}
+/*ESM Portal New UI*/

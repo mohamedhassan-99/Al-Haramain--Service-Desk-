@@ -1,0 +1,70 @@
+/*$Id$*/
+/* Starts - Header Portion */
+#topHeader .logo {
+	height: auto !important;
+	position: absolute;
+	top: -3px;
+	left: 10px;
+}
+.logo img {
+	width: auto !important;
+	height: 37px !important;
+}
+#topHeader {
+	padding: 0px 6px;
+}
+#topHeader tr td {
+	width: 0px !important;
+	white-space: nowrap;
+}
+#topHeader tr td.pl10, #top Header tr td.pl10 table tr td, #topHeader table.top_tabs tr td {
+	width: auto !important;
+}
+#topHeader tr td.ttb-pr60 {
+	width: 100%;
+	height: 34px;
+	padding-left: 5px !important;	
+	background: #4c4c4c url('/images/sdp-tab-bg.png') left top repeat-x;
+	border-radius: 3px;
+}
+#topHeader table.top_links {
+	padding: 10px 0px;
+	height: 46px;
+	width: auto !important;
+}
+#topHeader tr td.pl10 {
+	padding-left: 0px;
+}
+#topHeader tr td {
+	padding-right: 0px;
+}
+#topHeader table.top_tabs tr td a, #topHeader table.top_tabs tr td a.active, #topHeader table.top_tabs tr td a.firstTabActive, #topHeader table.top_tabs tr td a.lastTabActive {
+	padding: 9px 15px !important;
+	width: auto !important;
+	border: none !important;
+	color: #fff !important;
+	text-align: center;
+}
+#topHeader table.top_tabs tr td a {
+	background-image: none !important;
+}
+#topHeader table.top_tabs tr td a:hover {
+	background-color: #000 !important;
+}
+#topHeader table.top_tabs tr td {
+	float:left !important;
+}
+#topHeader table.top_tabs tr td a.active, #topHeader table.top_tabs tr td a, #topHeader table.top_tabs tr td a.firstTabActive, #topHeader table.top_tabs tr td a.lastTabActive {
+	height: auto;
+	line-height: normal;
+}
+#topHeader table.top_tabs tr td em {
+	background: none;
+}
+.topHeaderBG {
+	height: auto !important;
+}
+.hideForIT360 {
+	display: none;
+}
+/* Ends - Header Portion */

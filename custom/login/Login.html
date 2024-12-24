@@ -1,0 +1,135 @@
+<style>
+html,
+body{
+   height:100%; 
+}
+html {
+   letter-spacing:0.04em;
+   background:#3c434c url('/custom/customimages/login-bg.png') repeat;
+}
+body {
+   padding: 0px;
+   margin: 0px;
+   font-family: 'Roboto', arial;
+   font-size: 14px;
+}
+.modal-overlay2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 99;
+  
+}
+.modal-overlay2:hover {
+  background-color: #ffffff;
+  cursor:not-allowed;
+  opacity: 0.8;
+}
+#login_form {
+   width:100%;
+   height:100%;
+}
+.sdp-bg{    
+   height: 100%;
+   width: 100%;
+   position: absolute;
+}
+.loginbg {
+   height:100%;
+   width:100%;
+}
+.logo-heading {
+   background: #fff;
+   padding: 12px 0;
+   border-radius: 3px 3px 0 0;
+}
+.loginform{
+   background: #fff;
+}
+.colorborder div{
+   float: left;
+   height: 3px;
+   margin-right:0.4%;
+   width:24.6%;
+}
+.red{
+   background: #cc2034;
+}
+.green{
+   background: #11974d;
+}
+.blue{
+   background: #0c78b7;
+}
+.yellow{
+   background: #fcd018;
+}
+.copyright{
+   color: #fff;
+   text-align: center;
+   padding-top: 10px;
+   line-height: 20px;
+   font-size: 12px;
+}
+.copyright a{
+   color: #fff;
+   text-decoration: none;
+}
+.copyright a:hover {
+   text-decoration:underline;
+}
+.log-logo {
+  width:205px;
+  height:61px;
+  padding: 0 20px;
+}
+.sign-line{ 
+   text-align: center;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+.or-ctr{
+    background: #fff;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+	margin-left: -12px;
+    padding: 0 4px;
+    font-size: 12px;
+    color: #727272;
+}
+.sign-saml{
+    color: #009adb;
+    text-decoration: none;
+}
+</style>
+
+
+<div class="sdp-bg" style="background:url('/custom/customimages/login-bg-top.png') repeat-x ;"></div>
+<div class="loginbg">
+<div id="loginDiv">
+  <div class="logo-heading" style="display: block;">{{login_image}}</div>
+    <div class="colorborder">
+      <div class="red"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+      <div class="yellow"></div>
+    </div>
+    
+    <div class="loginform" id="loginFormDiv">
+      {{error_div}}
+      {{saml_div}}
+      {{or_div}}
+      {{login_form}}
+      {{login_info}}
+    </div>
+
+    <div class="copyright"><a href="http://www.manageengine.com/products/service-desk/help-desk-software.html" target="_blank" rel="noopener noreferrer">Help Desk Software</a> by <a name="productDetails" href="http://www.manageengine.com/products/service-desk/index.html" target="_blank" rel="noopener noreferrer" title='ManageEngine ServiceDesk Plus'>{{product_name}} &#124; {{product_version}}</a><br>
+    <div id="copyrightinfo"> Copyright &copy; {{copyright_year}} ZOHO Corporation. All rights reserved.</div></div>
+
+</div>
+</div>

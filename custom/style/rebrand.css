@@ -1,0 +1,370 @@
+/*$Id$*/
+
+/*integrations header*/
+#top-subheader {
+    display: none;
+}
+/*Apple link and android link in sidebar*/
+#apps_banner_sidebar {
+    display: none;
+}
+/*jump to in help*/
+#header_help_left {
+    display: none;
+}
+/*OD Promotion in help*/
+#helpalert-content {    
+    display: none;
+}
+/*contact divider in help*/
+#help-contact-divider {
+    display: none;
+}
+/*conytact in help*/
+#help-contact-support {
+    display: none;
+}
+/*sidebar quote*/
+#user-sidebar-quote {
+    display: none;
+}
+/*community in community tab*/
+#community-tab {
+    display: none;
+}
+/*Resources in community tab*/
+#resources-tab {
+    display: none;
+}
+/*Help doc in community tab*/
+#help-document-tab {
+    display: none;
+}
+/*contact us in community tab*/
+#contact-us-tab {
+    display: none;
+}
+/*webinar and knowledge base in community tab*/
+#webinar-kbase-tab {
+    display: none;
+}
+/*chat in community tab*/
+#chat-support-tab {
+    display: none;
+}
+/*Help card in mail server settings*/
+.helpcard-pos {
+    display: none !important;
+}
+/*Admin guide in mail server settings*/
+.mail-admin-guide {
+    display: none !important;
+}
+/*Documentation in help*/
+#header-help-doc {
+    display: none;
+}
+/*OD Ad in community tab*/
+#report_an_issue, .boldfnt2, #ODBannerinSupport {
+    display:none !important;
+}
+/*advanced trial license*/
+#advcontent{
+    display:none;
+}
+/*Apple android link in admin tab*/
+.mobile-sprite.app-store, .mobile-sprite.google-play {
+    display: none !important;
+}
+/*CMDB video button*/
+#cmdb-video-btn {
+    display: none;
+}
+/*CMDB help video hidden*/
+#cm-listview-video {
+    display: none;
+}
+/*solution module help video*/
+#solution-help-video {
+    display: none;
+}
+/*Space module help video*/
+#space-help-video {
+    display: none;
+}
+/*release module help video*/
+#release-help-video {
+    display: none;
+}
+/*change module help video*/
+#change-help-video {
+    display: none;
+}
+/*Calender module help video*/
+#calendar-help-video {
+    display: none;
+}
+/*Request module help video*/
+#request-help-video {
+    display: none;
+}
+/*Bottom ESM button*/
+#esm-widget-videobtn {
+    display: none;
+}
+/*Zia chat menu bar*/
+#zia-chat-bot-btn {
+    display: none;
+}
+/*First time login updates*/
+#overview-updates {
+    display: none;
+}
+/*First time login contact us*/
+#overview-contact-us {
+    display: none;
+}
+/*ESM Page view demo button*/
+#view-demo-btn {
+    display: none;
+}
+/*About service pack link hidden*/
+#service-pack-link {
+    display: none;
+}
+/*About contacts hidden*/
+#_DIALOG_CONTENT .box-arrow{
+    display: none;
+}
+/*Hiding feedback in help*/
+#feedback-header {
+    display: none;
+}
+/*Hiding browser default in personalize*/
+#brsr-dflt-lang {
+    display: none;
+}
+/*Hiding contact in licence details*/
+#license-contact {
+    display: none;
+}
+/*license page copy rights*/
+#license-copy-right {
+    display: none;
+}
+/*mombile apps link*/
+#access-mobile-apps {
+    display: none;
+}
+/*reports advanced analytics button*/
+#reports-advanced-analytics {
+    display: none;
+}
+/*reports help buttons*/
+#help-button-reports {
+    display: none;
+}
+/*microsoft graph know more link*/
+#graph-know-more {
+    display: none;
+}
+/*mimcrosoft graph limitatiosns link*/
+#graph-limit {
+    display: none;
+}
+/*microsoft graph outgoing know more link*/
+#graph-out-know {
+    display: none;
+}
+/*terms and conditions link in Asset sgent scan*/
+#terms_condition {
+    display : none;
+}
+/*reports pitstop*/
+#select-query-pitstop {
+    display: none;
+}
+/*zia predictions in ssp*/
+#zia_ssp {
+    display: none !important;
+}
+/*anti virus customization banner*/
+#antiviruscustomize {
+    display: none;
+}
+/*api documentation button*/
+#api-doc-btn {
+    display: none;
+}
+/*custom functions help icon*/
+.dre-deluge-actions {
+    display: none;
+}
+/*Integrations video btn*/
+#EC_Demo {
+    display: none !important;
+}
+/*Agent scan note*/
+#agent-scan-note {
+    display: none !important;
+}
+/*Distributed asset scan learn more*/
+#asset-scan-learnmore {
+    display: none !important;
+}
+/*hide freezing of agent configuration*/
+#freezeAgentConfig {
+    display: none !important;
+}
+/*hide agent conf learn more*/
+#agent-conf-learn {
+    display: none !important;
+}
+/*hide agent scan def*/
+#agent-scan-faq {
+    display: none !important;
+}
+/*zia approvals in ssp*/
+#zia-appr-ssp {
+    display: none !important;
+}
+/*hide contactcollection tab*/
+#contactCollectionTab {
+    display: none !important;
+}
+/*hide translate in help option*/
+#help-translate {
+    display: none !important;
+}
+/*reports mandatory field hidden*/
+#reports-mandatory-field {
+    display: none !important;
+}
+/*reports separator image*/
+#reports-separator-image {
+    display: none !important; 
+}
+/*latest build number hidden*/
+#about-build-version {
+    display: none !important;
+}
+/*saml troubleshoot hidden*/
+#samlTitle {
+    display: none !important;
+}
+/*view history separator in mail server settings*/
+#history-guide-separator-1, #history-guide-separator-2, #history-guide-separator-3, #history-guide-separator-4, #history-guide-separator-5 {
+    display: none !important;
+}
+/*Mail error folder know more hidden*/
+#mail-error-folder-know-more {
+    display: none !important;
+}
+/*AdventNet keywords in requester homepage*/
+#ssp-page-2,#ssp-page-4 {
+    display: none !important;
+}
+/*page scripts see more hidden*/
+#otherFunctions {
+    display: none !important;
+}
+/*CMDB video buttin hidden*/
+#CMDB-video-button {
+    display: none;
+}
+/*Microsoft 365 in Asset module*/
+#software-links-4 {
+    display: none;
+}
+/*common translations in esm page*/
+#esm-common-translations {
+    display: none;
+}
+/*request life cycle demo video*/
+#rlc_demo {
+    display: none;
+}
+/*project import helpcard*/
+#import-mpp-helpcard,#helpcard {
+    display: none;
+}
+/*asset module download agent button*/
+#asset-download-agent {
+    display: none;
+}
+/*DB Performance banner*/
+#dbperformance {
+    display: none !important;
+}
+/* ESM Outgoing mail */
+#esm-graph-limit,#esm-graph-knowmore,#adminguide-link,#admin-guide-sep {
+    display: none;
+}
+/* enable uem addon header */
+#enable-uem-addon {
+    display: none;
+}
+/* LDAP SSL info button */
+#ldap-ssl-info {
+    display: none;
+}
+/*asset download agents removed*/
+#asset-download-agents {
+    display: none !important;
+}
+/* AU banner hidden */
+#AUBanner {
+    display: none !important;
+}
+/* service catalog help video */
+#service-catalog-video {
+    display: none !important;
+}
+/* top header for scan troubleshoot logo hidden */
+#topHeader {
+    display: none !important;
+}
+/* Evaluation copy in header hidden */
+#evalcopy {
+    display: none !important;
+}
+/* Dc agent installer dialog box */
+#dc_dialog_container {
+    display: none !important;
+}
+/* premium support contact us */
+#premiumSupport {
+    display: none;
+}
+/* Mobile app tab in notification rules */
+#mobile_tab {
+    display: none;
+}
+/* support mail id after license updated */
+#after-license-support {
+    display: none
+}
+/* change v1 api eol */
+#change_V1_EOL {
+    display: none;
+}
+/* AU link in security configuration slider */
+#au-security-conf {
+    display: none;
+}
+/* AU banner for user */
+#AUNotifyUserBanner {
+    display: none;
+}
+/* AU in ESM directory */
+#esm-common-au {
+    display: none;
+}
+/* Mobile session timeout */
+#mobile-timeout-session {
+    display: none;
+}
+/* security configurations changes */
+#det-security-conf,#pwd-encr-conf,#mobile-app-conf,#pg-pwd-conf,#query-vuln-conf {
+    display: none;
+}

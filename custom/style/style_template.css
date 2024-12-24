@@ -1,0 +1,344 @@
+/* Custom Theme color - Any changes made to the file should be made also in style_template_ie11.css*/
+/* Admin side left side menu */
+.admin-sidebar a.lnav-header:hover,
+.nav-accordion:not(.admin-search-container).nav .nav > li.active > a,
+.nav-accordion:not(.admin-search-container).nav .nav > li.active > a:hover,
+.nav-accordion:not(.admin-search-container).nav .nav > li.active > a:focus,
+.admin-sidebar .nav-accordion .nav > li.active > a,
+.admin-sidebar .nav-accordion .nav > li.active > a:hover,
+.admin-sidebar .nav-accordion .nav > li.active > a:focus,
+.admin-sidebar .nav-accordion > li > a.lnav-item-current,
+.admin-sidebar .nav-accordion > li > a.lnav-item-current:hover,
+.admin-sidebar .nav-accordion > li > a.lnav-item-current:focus,
+.thm-pre-clr {
+  background: var(--primary_button_color, #008ddd);
+  color: var(--primary_button_text, #fff);
+}
+/* Tab Line color */
+.sdtabs-ui2 > .nav-sdtabs > li.active > a,
+.sdtabs-ui2 > .nav-sdtabs > li.active > a:active,
+.sdtabs-ui1 > .nav-sdtabs > li.active > a:hover,
+.sdtabs-ui1 > .nav-sdtabs > li.active > a:focus,
+.sdtabs-ui2 > .nav-sdtabs > li.active > .a-tab-ui,
+.sdtabs-ui2 > .nav-sdtabs > li.active > .a-tab-ui:active,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui:hover,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui:focus {
+  border-color: transparent transparent var(--link_tab_line_color, #008ddd);
+  color: var(--link_tab_line_color, #008ddd);
+}
+.sdtabs-ui1 > .nav-sdtabs > li.active > a,
+.sdtabs-ui1 > .nav-sdtabs > li.active > a:hover,
+.sdtabs-ui1 > .nav-sdtabs > li.active > a:focus,
+.sdtabs-ui1 > .nav-sdtabs > li.active > a:active, 
+.subtabon a,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui:hover,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui:focus,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui:active, 
+.subtabon .a-tab-ui,
+#ui-framework-design1 .ui-tabs1-active {
+  border-color: var(--link_tab_line_color, #008ddd) #DDD #FFF;
+  color: var(--link_tab_line_color, #008ddd);
+}
+/* Primary button text, bgcolor and border color */
+.btn-primary,
+.btn-primary.disabled,
+.btn-primary[disabled],
+.ie #impwz .btn-primary,
+.ie .tab-content-wrapper .btn-primary,
+.ie .fixedbtn .btn-primary,
+.ie .DialogBox .btn-primary,
+.zrept-integrationbg .btn-primary,
+.btn-primary.active, .open > .sdmenu-toggle.btn-primary,
+.btn-primary.disabled:hover,.btn-primary.disabled:focus,.btn-primary.disabled:active,
+.btn-primary[disabled]:hover,.btn-primary[disabled]:focus,.btn-primary[disabled]:active,
+.formStylebuttonAct, .formStylebuttonact, .formstylebuttonact, .formstylebuttonAct, .formstyleButtonAct, div.zep_PUbtm span.sel {
+  color: var(--primary_button_text, #fff);
+  border-color: var(--primary_button_border, #008ddd);
+  background: var(--primary_button_color, #008ddd);
+}
+/* Primary button hover focus active - text, bgcolor and border color */
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,.btn-primary.active,
+.formStylebuttonAct:hover, .formStylebuttonact:hover, .formstylebuttonact:hover, .formstylebuttonAct:hover, .formstyleButtonAct:hover,
+div.zep_PUbtm span:hover {
+  background: var(--primary_button_hover_color, #007fc7);
+  border-color: var(--primary_button_hover_color, #007fc7);
+  color: var(--primary_button_text, #fff);
+}
+/* Header - Top Navbar bgcolor color */
+.top-header > .navbar {
+  background-color: var(--top_header_color, #2c3644);
+}
+/* Header - Normal tab text color */
+.top-header .navbar-default .navbar-nav > li > a {
+  color: var(--tab_normal_text, #fff);
+  fill: var(--tab_normal_text, #fff);
+  stroke: var(--tab_normal_text, #fff);
+}
+.top-header .navbar-default li .cportthm{
+  color: var(--tab_normal_text, #fff);
+  fill: var(--tab_normal_text, #fff);
+}
+/* Esm button */
+.top-header button.esmportalbtn{
+  color: var(--tab_normal_text, #fff);
+  background: var(--primary_button_color, #008ddd);
+}
+.top-header button.esmportalbtn:hover{
+  background: var(--tab_hover_color, #575757);
+}
+/* Header - Selected tab bgcolor & text color */
+.top-header .navbar-default .navbar-nav > .active > a,
+.top-header .navbar-default .navbar-nav > .active > a:hover,
+.top-header .navbar-default .navbar-nav > .active > a:focus,
+.top-header .navbar-nav > li.active a,
+.top-header .navbar-nav > li.active a:hover {
+  background: var(--tab_selected_color, #008ddd);
+  color: var(--tab_selected_text, #fff);
+  fill: var(--tab_selected_text, #fff);
+}
+/* Header - Hover tab bgcolor */
+.top-header .navbar-default .navbar-nav > li.hover a,
+.top-header .navbar-default .navbar-nav > li > a:hover,
+.top-header .navbar-default .navbar-nav > li > a:focus {
+  background-color: var(--tab_hover_color, #575757);
+  color: var(--tab_normal_text, #fff);
+}
+.top-header .navbar-default .navbar-nav > li.open > a {
+  background: var(--tab_hover_color, #575757);
+}
+/* Body BG color */
+.bodybg{
+  background: var(--body_background_color, #f1f1f1);
+}
+/* Common font style */
+html, body{
+  font-family: var(--font_family);
+}
+/* Third party font overwrite */
+.flexigrid,
+.dhx_cal_container, .dhx_scale_bar, .dhtmlXTooltip.tooltip, .dhx_cal_event_line, .dhx_cal_navline .dhx_cal_date,
+div.dhxtree_dhx_skyblue .standartTreeRow, div.dhxtree_dhx_skyblue .standartTreeRow_lor,
+.select2-container-multi .select2-choices .select2-search-field input,
+.CodeMirror, .select2-search input, .fusioncharts-caption, .dhx_matrix_scell, .dhx_timeline_scale_header, .dhtmlx_modal_box,.dhx_cal_quick_info,
+.dhx_cal_event_clear, .dhx_month_link, .dhx_cal_light, .dhx_cal_light select, .dhx_cal_light input, .dhx_text_disabled, .dhx_wa_scale_bar, .dhx_wa_dnd{
+  font-family: inherit !important;
+}
+:-ms-input-placeholder, ::placeholder{
+  font-family: inherit;
+}
+/* Third party color overwrite */
+div.bDiv a{
+  color: #333333;
+}
+div.bDiv tr:hover a, div.dre-deluge-actions>div:hover, div.dre-deluge-actions .dre-actions-submenu>div:hover{
+  color: var(--link_tab_line_color, #008ddd);
+}
+div.flexigrid div.hDiv th.thOver div,
+div.flexigrid div.hDiv th.sorted.thOver div {
+  border-bottom: 1px solid var(--link_tab_line_color, #008ddd);
+}
+.sdmenu-dd > .active > a, .sdmenu-dd > .active > a:hover, .sdmenu-dd > .active > a:focus{
+  background-color: var(--primary_button_color, #008ddd);
+  color: var(--primary_button_text, #fff);
+}
+.svgbdy g.node:hover rect[id]{
+  stroke: var(--link_tab_line_color, #008ddd);
+}
+#rootG g.node:hover rect[id^='border']+text {
+  fill: var(--link_tab_line_color, #008ddd);
+}
+span[mention-type="user"]{
+  color: var(--link_tab_line_color, #008ddd) !important;
+}
+div.dre-deluge-actions>div:hover .dre-help-icon,
+div.dre-actions-submenu{
+  border-color: var(--link_tab_line_color, #008ddd);
+}
+div.flexigrid div.nDiv tr:hover td, .div.flexigrid div.nDiv tr.ndcolover td{
+  background: #ddd;
+  border-color: #ddd;
+}
+#_DIALOG_LAYER #inc_dialog input{
+  box-sizing: border-box;
+}
+div.zep_PUbtm span[data-val="Cancel"]{
+  color: #333;
+  background-color: #eee;
+  border-color: #cfcfcf;
+}
+div.zep_PUbtm span[data-val="Cancel"]:hover{
+  background-color: #d5d5d5;
+  border-color: #b1b1b1;
+  color: #333;
+  text-decoration: none;
+}
+/* Input Elements */
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .sdp-dialog input[type="text"]:focus,.sdp-dialog input[type="text"]:hover:focus,
+.form-control:focus,.input-group .formStyle:focus,
+.tableComponent .searchRow td .tableSpotSearch:focus,
+input[name="searchInputField"]:focus,
+#inc_add_fields .tab_content input[type="text"]:focus,
+#inc_add_fields .tab_content textarea:focus,
+.form-control.select2-container-active{
+    border: 1px solid var(--input_border_color, rgba(0, 141, 221, .7)); 
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px var(--input_border_shadow, rgba(0, 141, 221, 0.3));
+    outline:0;
+    box-shadow: none;
+}
+/* Select2 */
+.select2-container-active .select2-choice, 
+.select2-container-active .select2-choices{
+  box-shadow: none;
+  outline:0;
+  border-color: #e9e9e9;
+} 
+.form-control.select2-container-multi{
+  transition: none;
+}
+.form-control.select2-container.select2-dropdown-open,
+.select2-container.select2-dropdown-open,
+.select2-drop.select2-drop-above.select2-drop-active,
+.select2-drop-active{
+  border-color: #e9e9e9;
+  box-shadow: none;
+}
+.select2-drop-active,
+.select2-drop.select2-drop-above.select2-drop-active{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0px 3px 6px rgba(0,0,0,0.16);
+}
+.select2-container-multi .select2-choices,
+.select2-container-multi.select2-container-active .select2-choices,
+.select2-dropdown-open.select2-drop-above .select2-choice, .select2-dropdown-open.select2-drop-above .select2-choices{
+  box-shadow: none;
+  border: 0;
+}
+.select2-container-multi{
+  border: 1px solid #e9e9e9;
+}
+.select2-container-multi.select2-dropdown-open,
+.select2-container-multi.select2-container-active,
+.cus-sel2 .select2-container-multi.select2-dropdown-open .select2-choices,
+.detailview .cus-sel2 .select2-container-multi.select2-dropdown-open .select2-choices,
+.select2ui1.select2-container-active{
+  border: 1px solid var(--input_border_color, rgba(0, 141, 221, .7)) !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px var(--input_border_shadow, rgba(0, 141, 221, 0.3)) !important;
+  background: #fff;
+  box-shadow: none !important;
+}
+.select2-container-multi.select2-container-active .select2-choices{
+  background: #fff;
+}
+.select2-results .select2-highlighted,
+.select2-results .select2-highlighted a,
+.select2-results .select2-highlighted .text-muted{
+  background-color: var(--tab_selected_color, #008ddd);
+  color: var(--tab_selected_text, #fff);
+}
+/* Not in exiting css */
+.ri-btn:hover{
+  color: var(--link_tab_line_color, #008ddd);
+}
+#ui-framework-design1 .ui-formfield input[type=text]:focus, 
+#ui-framework-design1 .ui-forminput:focus, 
+#ui-framework-design1 .ui-formcombo:focus, 
+#ui-framework-design1 .ui-formtextarea:focus{
+  border-color: var(--input_border_color, rgba(0, 141, 221, .7));
+}
+#ui-framework-design1 .ui-formdate-cnt input,
+#ui-framework-design1 .ui-formdate-cnt2 input[type=text]{
+  height: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+}
+.ui-formdate-cnt.focusin,
+.ui-formdate-cnt2.focusin{
+  border-color: var(--input_border_color, rgba(0, 141, 221, .7));
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px var(--input_border_shadow, rgba(0, 141, 221, 0.3));
+  box-shadow: none;
+}
+.no-border:focus, .noborder:focus,
+.cus-sel2 .select2-container-multi.select2-dropdown-open .select2-choices,
+.detailview .cus-sel2 .select2-container-multi.select2-dropdown-open .select2-choices{
+  box-shadow: none !important;
+}
+.radio-inline, .checkbox-inline{
+ font-weight: inherit; 
+}
+/* Theme icon color change */
+.thmicon-fill{
+  fill: var(--link_tab_line_color, #008ddd);
+}
+.thmicon-stroke{
+  stroke: var(--link_tab_line_color, #008ddd);
+}
+.btn-outline-primary:hover .thmicon-stroke{
+  stroke: var(--primary_button_text, #fff);
+}
+/* Theme icon color change */
+/* Custom Checkbox & Radio Button Style */
+input[type="checkbox"], input[type="radio"] {
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  -webkit-appearance: none;
+  border: 1px solid #888;
+  display: inline-block;
+  position : relative;
+  outline : 0 !important;
+  cursor: pointer;
+}
+input[type="checkbox"][hidden], input[type="radio"][hidden]{
+  display: none;
+}
+input[type="checkbox"]{
+  border-radius: 3px !important;
+}
+input[type="radio"]{
+  border-radius: 50% !important;
+}
+input[type="checkbox"]:hover, input[type="radio"]:hover{
+  border-color: #555;
+}
+input[type="radio"]:focus, input[type="checkbox"]:focus {
+  outline: 2px solid var(--input_border_color, rgba(0, 141, 221, .7)) !important;
+  border-color: var(--input_border_color, rgba(0, 141, 221, .7));
+  outline-offset: 0px;
+}
+input[type="checkbox"]:checked{
+  background-color: var(--primary_button_color, rgba(0, 141, 221, .7));
+  border-color: var(--primary_button_color, rgba(0, 141, 221, .7));
+  background-image: url('/images/ui-common-view.svg?14900');
+  background-position: -269px -666px;
+}
+.chk18px input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  background-position: -278px -473px;
+}
+input[type="radio"]:checked {
+  box-shadow: 0 0 0px 1px var(--primary_button_color, rgba(0, 141, 221, .7)) inset, 0 0 0px 3px #ffffff inset, 0 0 0px 8px var(--primary_button_color, rgba(0, 141, 221, .7)) inset;
+  border: 0;
+}
+i[class^="zei-"]:before, i[zei*=" zei-"]:before{
+  color: var(--primary_button_color, rgba(0, 141, 221, .7));
+}
+/* customcheckbox and radio disabled property */
+input[type="checkbox"]:disabled, input[type="radio"]:disabled{
+  cursor: not-allowed;
+  border-color: rgba(118, 118, 118, 0.2);
+  background-color: rgba(118, 118, 118, 0.1);
+}
+input[type="checkbox"]:checked:disabled{
+  background-color: rgba(118, 118, 118, 0.4);
+}
+input[type="radio"]:checked:disabled{
+  box-shadow: 0 0 0px 1px rgba(118, 118, 118, 0.4) inset, 0 0 0px 3px #ffffff inset, 0 0 0px 8px rgba(118, 118, 118, 0.4) inset;
+}
+input[type="radio"], input[type="checkbox"] {
+  margin: 0px 4px 0px 4px;
+}
+/* Custom Theme color - Any changes made to the file should be made also in style_template_ie11.css*/

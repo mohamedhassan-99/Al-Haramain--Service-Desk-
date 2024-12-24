@@ -1,0 +1,77 @@
+/* Custom Theme color */
+.admin-sidebar a.lnav-header:hover,
+.nav-accordion:not(.admin-search-container).nav .nav > li.active > a,
+.nav-accordion:not(.admin-search-container).nav .nav > li.active > a:hover,
+.nav-accordion:not(.admin-search-container).nav .nav > li.active > a:focus,
+.admin-sidebar .nav-accordion > li > a.lnav-item-current,
+.admin-sidebar .nav-accordion > li > a.lnav-item-current:hover,
+.admin-sidebar .nav-accordion > li > a.lnav-item-current:focus,
+.thm-pre-clr {
+  background: #e94a00;
+  color: white;
+}
+/* Tab Line color */
+.sdtabs-ui2 > .nav-sdtabs > li.active > a,
+.sdtabs-ui2 > .nav-sdtabs > li.active > a:active,
+.sdtabs-ui1 > .nav-sdtabs > li.active > a:hover,
+.sdtabs-ui1 > .nav-sdtabs > li.active > a:focus,
+.sdtabs-ui2 > .nav-sdtabs > li.active > .a-tab-ui,
+.sdtabs-ui2 > .nav-sdtabs > li.active > .a-tab-ui:active,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui:hover,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui:focus {
+  border-color: transparent transparent #e94a00;
+}
+.sdtabs-ui1 > .nav-sdtabs > li.active > a,
+.sdtabs-ui1 > .nav-sdtabs > li.active > a:hover,
+.sdtabs-ui1 > .nav-sdtabs > li.active > a:focus,
+.sdtabs-ui1 > .nav-sdtabs > li.active > a:active,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui:hover,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui:focus,
+.sdtabs-ui1 > .nav-sdtabs > li.active > .a-tab-ui:active {
+  border-color: #e94a00 #DDD #FFF;
+}
+/* Primary button bgcolor and border color */
+.btn-primary {
+  color: white;
+  border-color: #e94a00;
+  background: #e94a00;
+}
+/* Primary button hover bgcolor and border color */
+.btn-primary:hover {
+  background: #d04200;
+  border-color: #d04200;
+}
+/* Header - Top Navbar bgcolor color */
+.top-header > .navbar {
+  background-color: #808080;
+}
+/* Header - Normal tab text color */
+.top-header .navbar-default .navbar-nav > li > a {
+  color: white;
+}
+/* Header - Hover tab bgcolor */
+.top-header .navbar-default .navbar-nav > li.hover a,
+.top-header .navbar-default .navbar-nav > li > a:hover,
+.top-header .navbar-default .navbar-nav > li > a:focus {
+  background-color: #6A6A6A;
+}
+/* Header - Selected tab bgcolor & text color */
+.top-header .navbar-default .navbar-nav > .active > a,
+.top-header .navbar-default .navbar-nav > .active > a:hover,
+.top-header .navbar-default .navbar-nav > .active > a:focus,
+.top-header .navbar-nav > li.active a,
+.top-header .navbar-nav > li.active a:hover {
+  background: #e94a00;
+  color: white;
+}
+/* Body BG color */
+#body,
+body {
+  background: #ffdac9;
+}
+/* Common font style */
+html,
+body {
+  font-family: "Comic Sans MS", Arial;
+}

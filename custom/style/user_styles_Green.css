@@ -1,0 +1,16 @@
+:root {
+	--top_header_color: rgb(37, 46, 53);
+	--tab_selected_color: rgb(12, 173, 119);
+	--tab_selected_text: rgb(255, 255, 255);
+	--tab_normal_text: rgb(255, 255, 255);
+	--tab_hover_color: rgba(59, 71, 81, 0.6);
+	--primary_button_color: rgb(12, 173, 119);	
+	--primary_button_light_color: rgba(12, 173, 119,.1);
+	--primary_button_hover_color: rgb(11,156,107);
+	--primary_button_text: rgb(255, 255, 255);
+	--primary_button_border: rgb(12, 173, 119);
+	--body_background_color: rgb(241, 241, 241);	
+	--input_border_color: rgba(12, 173, 119, .7);
+	--input_border_shadow: rgba(12, 173, 119, .3);
+	--link_tab_line_color: rgb(12, 173, 119);
+}

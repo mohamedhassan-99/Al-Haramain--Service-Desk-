@@ -1,0 +1,17 @@
+:root {
+	--top_header_color: @top_header_color;
+  	--tab_selected_color: @tab_selected_color;
+	--tab_selected_text: @tab_selected_text;
+	--tab_normal_text: @tab_normal_text;
+	--tab_hover_color: @tab_hover_color;
+	--primary_button_color: @primary_button_color;
+	--primary_button_light_color : @primary_button_light_color;
+	--primary_button_hover_color: @primary_button_hover_color;
+	--primary_button_text: @primary_button_text;
+	--primary_button_border: @primary_button_border;
+	--body_background_color: @body_background_color;
+	--input_border_color: @input_border_color;
+	--input_border_shadow: @input_border_shadow;
+	--link_tab_line_color: @link_tab_line_color;
+	--font_family: @font_family;
+}
